@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>thingy idfk</title>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,slnt,wdth,wght@8..144,-10..0,25..151,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+			
+			:root {
+				--primary0: #000000;
+				--primary10: #21005D;
+				--primary20: #381E72;
+				--primary30: #4F378B;
+				--primary40: #6750A4;
+				--primary50: #7F67BE;
+				--primary60: #9A82DB;
+				--primary70: #B69DF8;
+				--primary80: #D0BCFF;
+				--primary90: #EADDFF;
+				--primary95: #F6EDFF;
+				--primary98: #FEF7FF;
+				--primary99: #FFFBFE;
+				--primary100: #FFFFFF;
+				
+				--secondary0: #000000;
+                --secondary10: #1D192B;
+                --secondary20: #332D41;
+                --secondary30: #4A4458;
+                --secondary40: #625B71;
+                --secondary50: #7A7289;
+                --secondary60: #958DA5;
+                --secondary70: #B0A7C0;
+                --secondary80: #CCC2DC;
+                --secondary90: #E8DEF8;
+				--secondary95: #F6EDFF;
+				--secondary98: #FEF7FF;
+				--secondary99: #FFFBFE;
+				--secondary100: #FFFFFF;
+				
+				
+				--button-height-xsmall: 32px;
+				--button-height-small: 40px;
+				--button-height-medium: 56px;
+				--button-height-large: 96px;
+				--button-height-xlarge: 136px;
+				
+				--button-padding-xsmall: 12px;
+				--button-padding-small: 16px;
+				--button-padding-medium: 24px;
+				--button-padding-large: 48px;
+				--button-padding-xlarge: 64px;
+				
+				--button-gap-xsmall: 4px;
+				--button-gap-small: 8px;
+				--button-gap-medium: 8px;
+				--button-gap-large: 12px;
+				--button-gap-xlarge: 16px;
+				
+				--button-radius-xsmall: 12px;
+				--button-radius-small: 12px;
+				--button-radius-medium: 16px;
+				--button-radius-large: 28px;
+				--button-radius-xlarge: 28px;
+				--button-radius-pressed-xsmall: 8px;
+				--button-radius-pressed-small: 8px;
+				--button-radius-pressed-medium: 12px;
+				--button-radius-pressed-large: 16px;
+				--button-radius-pressed-xlarge: 16px;
+				
+				
+				--elevation-0: 0 0 0 0 #00000026, 0 0 0 0 #0000004d;
+				--elevation-1: 0 1px 3px 1px #00000026, 0 1px 2px 0 #0000004d;
+				--elevation-2: 0 2px 6px 2px #00000026, 0 1px 2px 0 #0000004d;
+				--elevation-3: 0 4px 8px 3px #00000026, 0 1px 3px 0 #0000004d;
+				--elevation-4: 0 6px 10px 4px #00000026, 0 2px 3px 0 #0000004d;
+				--elevation-5: 0 8px 12px 6px #00000026, 0 4px 4px 0 #0000004d;
+			}
+			
+			.dark {
+				--md-sys-color-primary: 211, 188, 253;
+				--md-sys-color-surface-tint: 211, 188, 253;
+				--md-sys-color-on-primary: 56, 38, 92;
+				--md-sys-color-primary-container: 79, 61, 116;
+				--md-sys-color-on-primary-container: 235, 221, 255;
+				--md-sys-color-secondary: 205, 194, 219;
+				--md-sys-color-on-secondary: 52, 45, 64;
+				--md-sys-color-secondary-container: 75, 67, 88;
+				--md-sys-color-on-secondary-container: 233, 222, 248;
+				--md-sys-color-tertiary: 240, 183, 197;
+				--md-sys-color-on-tertiary: 74, 37, 48;
+				--md-sys-color-tertiary-container: 100, 59, 70;
+				--md-sys-color-on-tertiary-container: 255, 217, 225;
+				--md-sys-color-error: 255, 180, 171;
+				--md-sys-color-on-error: 105, 0, 5;
+				--md-sys-color-error-container: 147, 0, 10;
+				--md-sys-color-on-error-container: 255, 218, 214;
+				--md-sys-color-background: 21, 18, 24;
+				--md-sys-color-on-background: 231, 224, 232;
+				--md-sys-color-surface: 21, 18, 24;
+				--md-sys-color-on-surface: 231, 224, 232;
+				--md-sys-color-surface-variant: 73, 69, 78;
+				--md-sys-color-on-surface-variant: 203, 196, 207;
+				--md-sys-color-outline: 148, 143, 153;
+				--md-sys-color-outline-variant: 73, 69, 78;
+				--md-sys-color-shadow: 0, 0, 0;
+				--md-sys-color-scrim: 0, 0, 0;
+				--md-sys-color-inverse-surface: 231, 224, 232;
+				--md-sys-color-inverse-on-surface: 50, 47, 53;
+				--md-sys-color-inverse-primary: 104, 84, 142;
+				--md-sys-color-primary-fixed: 235, 221, 255;
+				--md-sys-color-on-primary-fixed: 35, 15, 70;
+				--md-sys-color-primary-fixed-dim: 211, 188, 253;
+				--md-sys-color-on-primary-fixed-variant: 79, 61, 116;
+				--md-sys-color-secondary-fixed: 233, 222, 248;
+				--md-sys-color-on-secondary-fixed: 31, 24, 43;
+				--md-sys-color-secondary-fixed-dim: 205, 194, 219;
+				--md-sys-color-on-secondary-fixed-variant: 75, 67, 88;
+				--md-sys-color-tertiary-fixed: 255, 217, 225;
+				--md-sys-color-on-tertiary-fixed: 49, 16, 27;
+				--md-sys-color-tertiary-fixed-dim: 240, 183, 197;
+				--md-sys-color-on-tertiary-fixed-variant: 100, 59, 70;
+				--md-sys-color-surface-dim: 21, 18, 24;
+				--md-sys-color-surface-bright: 59, 56, 62;
+				--md-sys-color-surface-container-lowest: 15, 13, 19;
+				--md-sys-color-surface-container-low: 29, 27, 32;
+				--md-sys-color-surface-container: 33, 31, 36;
+				--md-sys-color-surface-container-high: 44, 41, 47;
+				--md-sys-color-surface-container-highest: 54, 52, 58;
+			}
+			.light {
+				--md-sys-color-primary: 104, 84, 142;
+				--md-sys-color-surface-tint: 104, 84, 142;
+				--md-sys-color-on-primary: 255, 255, 255;
+				--md-sys-color-primary-container: 235, 221, 255;
+				--md-sys-color-on-primary-container: 79, 61, 116;
+				--md-sys-color-secondary: 99, 91, 112;
+				--md-sys-color-on-secondary: 255, 255, 255;
+				--md-sys-color-secondary-container: 233, 222, 248;
+				--md-sys-color-on-secondary-container: 75, 67, 88;
+				--md-sys-color-tertiary: 126, 82, 93;
+				--md-sys-color-on-tertiary: 255, 255, 255;
+				--md-sys-color-tertiary-container: 255, 217, 225;
+				--md-sys-color-on-tertiary-container: 100, 59, 70;
+				--md-sys-color-error: 186, 26, 26;
+				--md-sys-color-on-error: 255, 255, 255;
+				--md-sys-color-error-container: 255, 218, 214;
+				--md-sys-color-on-error-container: 147, 0, 10;
+				--md-sys-color-background: 254, 247, 255;
+				--md-sys-color-on-background: 29, 27, 32;
+				--md-sys-color-surface: 254, 247, 255;
+				--md-sys-color-on-surface: 29, 27, 32;
+				--md-sys-color-surface-variant: 231, 224, 235;
+				--md-sys-color-on-surface-variant: 73, 69, 78;
+				--md-sys-color-outline: 122, 117, 127;
+				--md-sys-color-outline-variant: 203, 196, 207;
+				--md-sys-color-shadow: 0, 0, 0;
+				--md-sys-color-scrim: 0, 0, 0;
+				--md-sys-color-inverse-surface: 50, 47, 53;
+				--md-sys-color-inverse-on-surface: 245, 239, 247;
+				--md-sys-color-inverse-primary: 211, 188, 253;
+				--md-sys-color-primary-fixed: 235, 221, 255;
+				--md-sys-color-on-primary-fixed: 35, 15, 70;
+				--md-sys-color-primary-fixed-dim: 211, 188, 253;
+				--md-sys-color-on-primary-fixed-variant: 79, 61, 116;
+				--md-sys-color-secondary-fixed: 233, 222, 248;
+				--md-sys-color-on-secondary-fixed: 31, 24, 43;
+				--md-sys-color-secondary-fixed-dim: 205, 194, 219;
+				--md-sys-color-on-secondary-fixed-variant: 75, 67, 88;
+				--md-sys-color-tertiary-fixed: 255, 217, 225;
+				--md-sys-color-on-tertiary-fixed: 49, 16, 27;
+				--md-sys-color-tertiary-fixed-dim: 240, 183, 197;
+				--md-sys-color-on-tertiary-fixed-variant: 100, 59, 70;
+				--md-sys-color-surface-dim: 222, 216, 224;
+				--md-sys-color-surface-bright: 254, 247, 255;
+				--md-sys-color-surface-container-lowest: 255, 255, 255;
+				--md-sys-color-surface-container-low: 248, 241, 250;
+				--md-sys-color-surface-container: 242, 236, 244;
+				--md-sys-color-surface-container-high: 237, 230, 238;
+				--md-sys-color-surface-container-highest: 231, 224, 232;
+			}
+
+			
+			body {
+				display: flex;
+				flex-direction: column;
+				flex-wrap: nowrap;
+				gap: 12px;
+				background-color: rgb(var(--md-sys-color-background));
+				margin: 0;
+				overflow: auto;
+				padding: 12px;
+			}
+			.row {
+				display: flex;
+				flex-wrap: nowrap;
+				gap: 12px;
+			}
+			
+			.card {
+				background-color: rgb(var(--md-sys-color-surface-container-low));
+				padding: 24px;
+				border-radius: 36px;
+				box-shadow: var(--elevation-0);
+				transition: background-color 300ms cubic-bezier(0.34, 0.88, 0.34, 1.00), box-shoadow 300ms cubic-bezier(0.34, 0.88, 0.34, 1.00);
+			}
+			.card:hover {
+				background-color: rgb(var(--md-sys-color-surface-container));
+				box-shadow: var(--elevation-2);
+			}
+			
+			.button_group {
+				gap: 8px;
+				display: flex;
+				flex-wrap: nowrap;
+				flex-direction: row;
+			}
+			button {
+				border-radius: calc(var(--button-height-medium) / 2);
+				border-color: transparent;
+				width: unset;
+				height: var(--button-height-medium);
+				padding: 0 var(--button-padding-medium);
+				font-family: "Roboto Flex", Roboto, "Sans Serif";
+				transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90),
+				color 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00),
+				background-color 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
+			}
+			button {
+				font-size: 28px;
+				font-weight: 700;
+				font-style: normal;
+				font-variation-settings: "wdth" 151;
+			}
+			.medium > button:active {
+				border-radius: var(--button-radius-pressed-medium);
+			}
+			.idiot:active {
+				padding: 0 calc(var(--button-padding-medium) + 8px);
+				font-weight: 1000;
+			}
+			.button_group > button:active:not(:not(:first-child):not(:last-child)) {
+				border-radius: var(--button-radius-pressed-medium);
+				padding: 0 calc(var(--button-padding-medium) + 4px);
+			}
+			.button_group > :not(:not(*:has(+ *:active)):not(*:active + *)) {
+				padding: 0 calc(var(--button-padding-medium) - 4px);
+			}
+			button {
+				color: rgb(var(--md-sys-color-on-secondary-container));
+				background-color: rgb(var(--md-sys-color-secondary-container));
+			}
+			button:active {
+				color: rgb(var(--md-sys-color-on-primary));
+				background-color: rgb(var(--md-sys-color-primary));
+			}
+			.idiot > * {
+				width: 28px;
+			}
+			.call {
+				color: #bcebd8;
+				background-color: #0f4d34;
+			}
+			.call:active {
+				color: #062b1c;
+				background-color: #b3f2d9;
+			}
+			
+			
+			input[type=range] {
+			    width: 200px;
+			    margin: 14px 0;
+				background-color: transparent;
+			    -webkit-appearance: none;
+			}
+			input[type=range]:focus {
+			    outline: none;
+			}
+			input[type=range]::-webkit-slider-runnable-track {
+			    background: rgb(var(--md-sys-color-secondary-container));
+			    border: 6px solid rgba(0, 0, 0, 0);
+			    border-radius: 8px;
+			    width: 100%;
+				height: 16px;
+				cursor: pointer;
+			}
+			input[type=range]::-webkit-slider-thumb {
+				margin-top: -20px;
+				width: 4px;
+				height: 44px;
+				background: rgb(var(--md-sys-color-primary));
+				border: 0px solid rgba(0, 0, 0, 0);
+				border: 0;
+				border-radius: 2px;
+				cursor: pointer;
+				-webkit-appearance: none;
+			}
+			input[type=range]:focus::-webkit-slider-runnable-track {
+			    background: rgb(var(--md-sys-color-secondary-container));
+			}
+			input[type=range]::-moz-range-track {
+				background: rgb(var(--md-sys-color-secondary-container));
+				border: 6px solid rgba(0, 0, 0, 0);
+				border-radius: 8px;
+				width: 100%;
+				height: 16px;
+				cursor: pointer;
+			}
+			input[type=range]::-moz-range-thumb {
+				width: 4px;
+				height: 44px;
+				background: rgb(var(--md-sys-color-primary));
+				border: 0px solid rgba(0, 0, 0, 0);
+				border: 0;
+				border-radius: 2px;
+				cursor: pointer;
+			}
+			input[type=range]::-ms-track {
+			  background: transparent;
+			  border-color: transparent;
+			  border-width: 14px 0;
+			  color: transparent;
+			  width: 100%;
+			  height: 16px;
+			  cursor: pointer;
+			}
+			input[type=range]::-ms-fill-lower {
+			  background: rgb(var(--md-sys-color-secondary-container));
+			  border: 6px solid rgba(0, 0, 0, 0);
+			  border-radius: 16px;
+			}
+			input[type=range]::-ms-fill-upper {
+			  background: rgb(var(--md-sys-color-secondary-container));
+			  border: 6px solid rgba(0, 0, 0, 0);
+			  border-radius: 16px;
+			}
+			input[type=range]::-ms-thumb {
+			  width: 4px;
+			  height: 44px;
+			  background: rgb(var(--md-sys-color-primary));
+			  border: 0px solid rgba(0, 0, 0, 0);
+			  border: 0;
+			  border-radius: 2px;
+			  cursor: pointer;
+			  margin-top: 0px;
+			  /*Needed to keep the Edge thumb centred*/
+			}
+			input[type=range]:focus::-ms-fill-lower {
+			  background: rgb(var(--md-sys-color-secondary-container));
+			}
+			input[type=range]:focus::-ms-fill-upper {
+			  background: rgb(var(--md-sys-color-secondary-container));
+			}
+			/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+			how to remove the virtical space around the range input in IE*/
+			@supports (-ms-ime-align:auto) {
+			  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+			  input[type=range] {
+				margin: 0;
+				/*Edge starts the margin from the thumb, not the track as other browsers do*/
+			  }
+			}
+		</style>
+	</head>
+	<body class='dark'>
+		<div class='row'>
+			<div class='card' style='gap: 8px; display:flex; flex-wrap:nowrap; flex-direction:column; align-items:center;'>
+				<div class='medium button_group'>
+					<button class='idiot'><div>1</div></button>
+					<button class='idiot'><div>2</div></button>
+					<button class='idiot'><div>3</div></button>
+				</div>
+				<div class='medium button_group'>
+					<button class='idiot'><div>4</div></button>
+					<button class='idiot'><div>5</div></button>
+					<button class='idiot'><div>6</div></button>
+				</div>
+				<div class='medium button_group'>
+					<button class='idiot'><div>7</div></button>
+					<button class='idiot'><div>8</div></button>
+					<button class='idiot'><div>9</div></button>
+				</div>
+				<div class='medium button_group'>
+					<button class='idiot'><div>*</div></button>
+					<button class='idiot'><div>0</div></button>
+					<button class='idiot'><div>#</div></button>
+				</div>
+				<div class='medium'>
+					<button class='call'><div>Call</div></button>
+				</div>
+			</div>
+			<div class='card' style='gap:8px; display:flex; flex-wrap:wrap; flex-direction:column; justify-content:center; align-items:center;'>
+				<div class='xs-slider'>
+				<input type="range" id="volume" name="volume" min="0" max="100" value="50">
+			</div>
+		</div>
+	</body>
+	<script>
+	</script>
+</html>
