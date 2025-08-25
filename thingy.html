@@ -208,18 +208,18 @@
 				padding: 0 calc(var(--button-padding-medium) + 8px);
 				font-weight: 1000;
 			}
-			.button_group > button:active:not(:not(:first-child):not(:last-child)) {
+			.button_group > button:active:not(:not(:first-child):not(:last-child)), .button_group > button:hover:not(:not(:first-child):not(:last-child)) {
 				border-radius: var(--button-radius-pressed-medium);
 				padding: 0 calc(var(--button-padding-medium) + 4px);
 			}
-			.button_group > :not(:not(*:has(+ *:active)):not(*:active + *)) {
+			.button_group > :not(:not(*:has(+ *:active)):not(*:active + *)), .button_group > :not(:not(*:has(+ *:hover)):not(*:hover + *)) {
 				padding: 0 calc(var(--button-padding-medium) - 4px);
 			}
 			button {
 				color: rgb(var(--md-sys-color-on-secondary-container));
 				background-color: rgb(var(--md-sys-color-secondary-container));
 			}
-			button:active {
+			button:active, button:hover {
 				color: rgb(var(--md-sys-color-on-primary));
 				background-color: rgb(var(--md-sys-color-primary));
 			}
@@ -368,5 +368,6 @@
 	<script>
 	</script>
 </html>
+
 
 
