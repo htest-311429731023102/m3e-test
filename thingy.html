@@ -44,6 +44,9 @@
 				--elevation-3: 0 4px 8px 3px #00000026, 0 1px 3px 0 #0000004d;
 				--elevation-4: 0 6px 10px 4px #00000026, 0 2px 3px 0 #0000004d;
 				--elevation-5: 0 8px 12px 6px #00000026, 0 4px 4px 0 #0000004d;
+				
+				--easeInOutCubicEmphasized: cubic-bezier(0.32, 0, 0, 1);
+
 			}
 			
 			.dark {
@@ -159,6 +162,7 @@
 				margin: 0;
 				overflow: auto;
 				padding: 12px;
+				transition: all 500ms var(--easeInOutCubicEmphasized), background-color 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
 			}
 			.row {
 				display: flex;
@@ -169,13 +173,30 @@
 			.card {
 				background-color: rgb(var(--md-sys-color-surface-container-low));
 				padding: 24px;
-				border-radius: 36px;
-				box-shadow: var(--elevation-0);
-				transition: background-color 300ms cubic-bezier(0.34, 0.88, 0.34, 1.00), box-shoadow 300ms cubic-bezier(0.34, 0.88, 0.34, 1.00);
+				border-radius: 24px;
+				box-shadow: var(--elevation-1);
+				transition: background-color 300ms cubic-bezier(0.34, 0.88, 0.34, 1.00), box-shadow 300ms cubic-bezier(0.34, 0.88, 0.34, 1.00);
+				overflow: hidden;
+				align-content: center;
+			}
+			.card .card {
+				background-color: inherit;
 			}
 			.card:hover {
 				background-color: rgb(var(--md-sys-color-surface-container));
 				box-shadow: var(--elevation-2);
+			}
+			.card .card:hover {
+				background-color: rgb(var(--md-sys-color-surface-container-high));
+				box-shadow: var(--elevation-3);
+			}
+			.card .card .card:hover {
+				background-color: rgb(var(--md-sys-color-surface-container-high));
+				box-shadow: var(--elevation-4);
+			}
+			.card .card .card .card:hover {
+				background-color: rgb(var(--md-sys-color-surface-container-highest));
+				box-shadow: var(--elevation-5);
 			}
 			
 			.button_group {
@@ -330,6 +351,116 @@
 				/*Edge starts the margin from the thumb, not the track as other browsers do*/
 			  }
 			}
+			
+			input:where([type="checkbox"][role="switch"]) {
+			  -webkit-appearance: none;
+			  -moz-appearance: none;
+			  appearance: none;
+			  display: flex;
+			  width: 52px;
+			  height: 32px;
+			  align-items: center;
+			  position: relative;
+			  font-size: inherit;
+			  border-radius: 16px;
+			  box-sizing: border-box;
+			  vertical-align: text-bottom;
+			  color: rgb(var(--md-sys-color-outline));
+			  background-color: rgb(var(--md-sys-color-surface-container-highest));
+			  border: 2px solid rgb(var(--md-sys-color-outline));
+			  transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90);
+			}
+			input:where([type="checkbox"][role="switch"]):before {
+			  content: "";
+			  position: absolute;
+			  left: 8px;
+			  width: 40px;
+			  height: 40px;
+			  margin: -14px;
+			  border-radius: 50%;
+			  box-sizing: content-box;
+			  background: rgba(var(--md-sys-color-on-surface), 0);
+			  transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90);
+			}
+			input:where([type="checkbox"][role="switch"]):after {
+			  content: "";
+			  position: absolute;
+			  left: 8px;
+			  width: 16px;
+			  height: 16px;
+			  margin: -2px;
+			  border-radius: 50%;
+			  box-sizing: content-box;
+			  background: currentcolor;
+			  transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90);
+			}
+			input:where([type="checkbox"][role="switch"]):not(:disabled):not(:not(:hover):not(:target)) {
+			  color: rgb(var(--md-sys-color-on-surface-variant));
+			}
+			input:where([type="checkbox"][role="switch"]):not(:disabled):checked:not(:not(:hover):not(:target)) {
+			  color: rgb(var(--md-sys-color-primary-container));
+			}
+			input:where([type="checkbox"][role="switch"]):checked {
+			  color: rgb(var(--md-sys-color-on-primary));
+			  background-color: rgb(var(--md-sys-color-primary));
+			  border-color: rgb(var(--md-sys-color-primary));
+			}
+			input:where([type="checkbox"][role="switch"]):checked:before {
+			  left: 28px;
+			  background-color: rgba(var(--md-sys-color-primary), 0);
+			}
+			input:where([type="checkbox"][role="switch"]):checked:after {
+			  width: 24px;
+			  height: 24px;
+			  left: 24px;
+			}
+			input:where([type="checkbox"][role="switch"]):not(:disabled):not(:not(:active):not(:target)):before {
+			  background: rgba(var(--md-sys-color-on-surface), 0.1);
+			}
+			input:where([type="checkbox"][role="switch"]):not(:disabled):active:after {
+			  left: 2px;
+			  width: 28px;
+			  height: 28px;
+			}
+			input:where([type="checkbox"][role="switch"]):checked:not(:disabled):not(:not(:active):not(:target)):before {
+			  background: rgba(var(--md-sys-color-primary), 0.1);
+			}
+			input:where([type="checkbox"][role="switch"]):checked:not(:disabled):active:after {
+			  left: 22px;
+			}
+			input:where([type="checkbox"][role="switch"]):disabled {
+			  color: rgba(var(--md-sys-color-on-surface), 0.38);
+			  background-color: rgba(var(--md-sys-color-surface-variant), 0.1);
+			  border-color: rgba(var(--md-sys-color-on-surface), 0.1);
+			}
+			input:where([type="checkbox"][role="switch"]):checked:disabled {
+			  color: rgb(var(--md-sys-color-surface));
+			  background-color: rgba(var(--md-sys-color-on-surface), 0.1);
+			  border-color: rgba(var(--md-sys-color-on-surface), 0);
+			}
+			:has(> input:where([type="checkbox"][role="switch"])) {
+				display: flex;
+				gap: 16px;
+				justify-content: space-between;
+				align-items: center;
+				font-family: Roboto;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 20px;
+				color: rgb(var(--md-sys-color-on-surface));
+			}
+			:has(> input:where([type="checkbox"][role="switch"])) > div {
+				display: flex;
+				flex-direction: column;
+			}
+			
+			sub {
+				font-size: 11px;
+				font-weight: 500;
+				line-height: 16px;
+				color: rgb(var(--md-sys-color-on-surface-variant));
+			}
+			
 		</style>
 	</head>
 	<body class='dark'>
@@ -359,9 +490,36 @@
 					<button class='call'><div>Call</div></button>
 				</div>
 			</div>
+			<div class='card' style="display:flex; gap:24px; flex-direction:column;">
+				<div>
+					Label text
+					<input type='checkbox' role='switch'/>
+				</div>
+				<div>
+					<div>
+						Label text
+						<sub>Supporting text</sub>
+					</div>
+					<input type='checkbox' role='switch' checked/>
+				</div>
+				<div>
+					Disabled switch
+					<input type='checkbox' role='switch' disabled/>
+				</div>
+				<div>
+					Disabled switch
+					<input type='checkbox' role='switch' checked disabled/>
+				</div>
+			</div>
+		</div>
+		<div class='row'>
 			<div class='card' style='gap:8px; display:flex; flex-wrap:wrap; flex-direction:column; justify-content:center; align-items:center;'>
 				<div class='xs-slider'>
-				<input type="range" id="volume" name="volume" min="0" max="100" value="50">
+					<input type='range' min='0' max='100' value='50'>
+				</div>
+				<div class='xs-slider'>
+					<input type='range' min='0' max='100' value='50'>
+				</div>
 			</div>
 		</div>
 	</body>
