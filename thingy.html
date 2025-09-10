@@ -164,10 +164,21 @@
 				padding: 12px;
 				transition: all 500ms var(--easeInOutCubicEmphasized), background-color 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
 			}
+			body::-webkit-scrollbar {
+				display: none;
+			}
 			.row {
 				display: flex;
 				flex-wrap: nowrap;
 				gap: 12px;
+				width: max-content;
+			}
+			div:has(> .row) {
+				border-radius: 24px;
+				overflow-x: auto;
+			}
+			div:has(> .row)::-webkit-scrollbar {
+				display: none;
 			}
 			
 			.card {
@@ -464,7 +475,7 @@
 		</style>
 	</head>
 	<body class='dark'>
-		<div class='row'>
+		<div><div class='row'>
 			<div class='card' style='gap: 8px; display:flex; flex-wrap:nowrap; flex-direction:column; align-items:center;'>
 				<div class='medium button_group'>
 					<button class='idiot'><div>1</div></button>
@@ -511,8 +522,8 @@
 					<input type='checkbox' role='switch' checked disabled/>
 				</div>
 			</div>
-		</div>
-		<div class='row'>
+		</div></div>
+		<div><div class='row'>
 			<div class='card' style='gap:8px; display:flex; flex-wrap:wrap; flex-direction:column; justify-content:center; align-items:center;'>
 				<div class='xs-slider'>
 					<input type='range' min='0' max='100' value='50'>
@@ -521,7 +532,7 @@
 					<input type='range' min='0' max='100' value='50'>
 				</div>
 			</div>
-		</div>
+		</div></div>
 	</body>
 	<script>
 	</script>
