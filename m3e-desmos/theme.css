@@ -1224,3 +1224,34 @@ input:where([type='checkbox'][role='switch']):checked:disabled {
 .dcg-arrow {
 	display: none !important;
 }
+
+.dcg-segmented-control-container.dcg-theme-default {
+	gap: 2px;
+	height: 40px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.dcg-segmented-control-btn {
+	height: 40px;
+	margin: 0 !important;
+	border-radius: 8px;
+	color: rgb(var(--md-sys-color-on-secondary-container)) !important;
+	background: rgb(var(--md-sys-color-secondary-container)) !important;
+	border: none !important;
+	transition:
+		border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9),
+		color 150ms cubic-bezier(0.31, 0.94, 0.34, 1),
+		background 150ms cubic-bezier(0.31, 0.94, 0.34, 1);
+}
+.dcg-segmented-control-btn.dcg-selected {
+	border-radius: 20px;
+	color: rgb(var(--md-sys-color-on-secondary)) !important;
+	background: rgb(var(--md-sys-color-secondary)) !important;
+}
+.dcg-segmented-control-btn:not(.dcg-selected).dcg-hovered {
+	border-radius: 12px;
+}
+.dcg-segmented-control-btn.dcg-disabled {
+	color: rgba(var(--md-sys-color-on-surface), 0.38) !important;
+	background: rgba(var(--md-sys-color-on-surface), 0.1) !important;
+}
