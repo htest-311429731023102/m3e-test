@@ -140,7 +140,7 @@ button.dcg-unstyled-button.dcg-action-opendrawer.dcg-header-btn {
 	.dcg-expressionitem.dcg-new-expression
 	.dcg-new-expression-fade,
 .dcg-calculator-api-container-v1_12 .dcg-expression-edit-actions .dcg-graphic {
-	background: none;
+	display: none;
 }
 
 .save-btn-container.save-btn-container__split-btn {
@@ -168,9 +168,14 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	display: block;
 	width: 20px;
 }
+.save-btn-container.save-btn-container
+	.dcg-save-button:not(.dcg-dropdown-caret) {
+	font-family: Roboto, Sans-Serif;
+	font-size: 14px;
+	font-weight: 500;
+}
 .save-btn-container.save-btn-container__split-btn
 	.dcg-save-button:not(.dcg-dropdown-caret) {
-	font-size: 14px;
 	border-top-right-radius: 4px !important;
 	border-bottom-right-radius: 4px !important;
 }
@@ -370,8 +375,9 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	height: 56px;
 	padding: 16px 24px;
 	border-radius: 28px;
-	color: rgb(var(--md-sys-color-on-surface-variant));
-	background: rgb(var(--md-sys-color-surface-container-highest)) !important;
+	color: rgb(var(--md-sys-color-primary));
+	background: rgb(var(--md-sys-color-surface-container-high)) !important;
+	box-shadow: var(--elevation-2);
 	transition: border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9);
 }
 .dcg-calculator-api-container-v1_12
