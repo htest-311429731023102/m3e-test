@@ -81,18 +81,47 @@ html {
 
 .dcg-graph-inner {
 	color: rgb(var(--md-sys-color-on-surface));
-	background: rgb(var(--md-sys-color-surface));
+	background: rgb(var(--md-sys-color-surface-container-lowest));
 }
 
 .dcg-calculator-api-container-v1_12 .dcg-header {
 	background: rgb(var(--md-sys-color-surface-container-low));
 	padding: 6px 0;
-	height: unset;
+	height: 64px;
 	border: none;
+}
+.dcg-calculator-api-container-v1_12 .dcg-header .dcg-header-btn {
+	color: rgb(var(--md-sys-color-on-surface));
+}
+button.dcg-unstyled-button.dcg-action-opendrawer.dcg-header-btn {
+	width: 40px;
+	height: 40px;
+	margin: 8px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-header
+	.align-left-container
+	.dcg-graph-title {
+	height: unset;
+	padding: 0 16px 0 0;
+	font-family: Roboto, Sans-Serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	border: none;
+}
+.dcg-calculator-api-container-v1_12 .dcg-icon-folder-open:before {
+	content: '\\e246';
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-open-my-graphs-button
+	.dcg-icon-folder-open {
+	top: unset !important;
+	font-size: 20px;
 }
 .dcg-calculator-api-container-v1_12 #graph-container {
 	position: absolute;
-	top: 58px;
+	top: 64px;
 	left: 0;
 	bottom: 0;
 	right: 0;
@@ -248,8 +277,18 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	border: none !important;
 	opacity: 1 !important;
 }
-.dcg-calculator-api-container-v1_12 .dcg-layered-icon {
-	display: contents;
+.dcg-calculator-api-container-v1_12
+	.dcg-circular-icon.dcg-has-background-image
+	i.dcg-layered-icon,
+.dcg-calculator-api-container-v1_12
+	.dcg-circular-icon.dcg-colored-icon
+	i.dcg-layered-icon {
+	top: unset;
+	left: unset;
+	right: unset;
+	bottom: unset;
+	font-size: 40px;
+	line-height: 40px;
 }
 .dcg-calculator-api-container-v1_12 .dcg-circular-icon-container,
 .dcg-calculator-api-container-v1_12 .dcg-expression-icon-container,
@@ -500,7 +539,7 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: rgb(var(--md-sys-color-primary));
+	background: rgb(var(--md-sys-color-primary)) !important;
 	opacity: 1;
 }
 .dcg-calculator-api-container-v1_12
@@ -935,10 +974,10 @@ body.dsm-better-nav-scrollable-expressions
 	line-height: 24px;
 	opacity: 1;
 	border-radius: 16px;
-	background: rgb(var(--md-sys-color-secondary-container));
+	background: rgba(var(--md-sys-color-on-secondary-container), 0);
 	transition:
 		all 300ms cubic-bezier(0.3, 0, 0.8, 0.15),
-		background 200ms cubic-bezier(0.34, 0.8, 0.34, 1);
+		background 300ms cubic-bezier(0.34, 0.88, 0.34, 1);
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-expression-edit-actions
@@ -957,7 +996,7 @@ body.dsm-better-nav-scrollable-expressions
 	background: rgba(var(--md-sys-color-on-secondary-container), 0.08);
 	transition:
 		all 300ms cubic-bezier(0.05, 0.7, 0.1, 1),
-		background 200ms cubic-bezier(0.34, 0.8, 0.34, 1);
+		background 300ms cubic-bezier(0.34, 0.88, 0.34, 1);
 }
 
 .dcg-calculator-api-container-v1_12
@@ -1065,4 +1104,104 @@ button.dcg-btn-slider.dcg-btn-blue {
 	line-height: 20px !important;
 	color: inherit;
 	background: none !important;
+}
+
+.dcg-options-menu-section-title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.dcg-toggle-view .dcg-toggle-track {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	display: flex;
+	align-items: center;
+	background-color: rgb(
+		var(--md-sys-color-surface-container-highest)
+	) !important;
+	font-size: inherit;
+	width: 52px !important;
+	height: 32px !important;
+	border: 2px solid rgb(var(--md-sys-color-outline));
+	border-radius: 16px !important;
+	vertical-align: text-bottom;
+	transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9) !important;
+}
+.dcg-toggle-view .dcg-toggle-track .dcg-toggle-switch {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: unset;
+	left: 8px !important;
+	box-sizing: content-box;
+	width: 16px !important;
+	height: 16px !important;
+	margin: -2px;
+	border-radius: 50%;
+	background: rgb(var(--md-sys-color-outline)) !important;
+	box-shadow: none;
+	transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9) !important;
+}
+.dcg-toggle-view .dcg-toggle-track .dcg-toggle-switch:before {
+	content: '';
+	position: absolute;
+	box-sizing: content-box;
+	width: 40px;
+	height: 40px;
+	margin: -14px;
+	border-radius: 50%;
+	background: rgba(var(--md-sys-color-on-surface), 0);
+	transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9);
+}
+.dcg-toggle-view .dcg-toggle-track.dcg-hovered .dcg-toggle-switch {
+	background: rgb(var(--md-sys-color-on-surface-variant)) !important;
+}
+.dcg-toggle-view.dcg-toggled .dcg-toggle-track.dcg-hovered .dcg-toggle-switch {
+	background: rgb(var(--md-sys-color-primary-container)) !important;
+}
+.dcg-toggle-view.dcg-toggled .dcg-toggle-track {
+	background-color: rgb(var(--md-sys-color-primary)) !important;
+	border-color: rgb(var(--md-sys-color-primary));
+}
+.dcg-toggle-view.dcg-toggled .dcg-toggle-track .dcg-toggle-switch {
+	background: rgb(var(--md-sys-color-on-primary)) !important;
+}
+.dcg-toggle-view.dcg-toggled .dcg-toggle-track .dcg-toggle-switch:before {
+	background-color: rgba(var(--md-sys-color-primary), 0);
+}
+.dcg-toggle-view.dcg-toggled .dcg-toggle-track .dcg-toggle-switch {
+	width: 24px !important;
+	height: 24px !important;
+	left: 24px !important;
+}
+.dcg-toggle-view .dcg-toggle-track.dcg-depressed .dcg-toggle-switch:before {
+	background: rgba(var(--md-sys-color-on-surface), 0.1);
+}
+.dcg-toggle-view .dcg-toggle-track.dcg-depressed .dcg-toggle-switch {
+	left: 2px !important;
+	width: 28px !important;
+	height: 28px !important;
+}
+input:where([type='checkbox'][role='switch']):checked:not(:disabled):not(
+		:not(:active):not(:target)
+	):before {
+	background: rgba(var(--md-sys-color-primary), 0.1);
+}
+.dcg-toggle-view.dcg-toggled
+	.dcg-toggle-track.dcg-depressed
+	.dcg-toggle-switch {
+	left: 22px !important;
+}
+input:where([type='checkbox'][role='switch']):disabled {
+	color: rgba(var(--md-sys-color-on-surface), 0.38);
+	background-color: rgba(var(--md-sys-color-surface-variant), 0.1);
+	border-color: rgba(var(--md-sys-color-on-surface), 0.1);
+}
+input:where([type='checkbox'][role='switch']):checked:disabled {
+	color: rgb(var(--md-sys-color-surface));
+	background-color: rgba(var(--md-sys-color-on-surface), 0.1);
+	border-color: rgba(var(--md-sys-color-on-surface), 0);
 }
