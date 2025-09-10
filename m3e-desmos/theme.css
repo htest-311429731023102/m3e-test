@@ -12,56 +12,6 @@
 }
 
 :root {
-	--md-sys-color-primary: 211, 188, 253;
-	--md-sys-color-surface-tint: 211, 188, 253;
-	--md-sys-color-on-primary: 56, 38, 92;
-	--md-sys-color-primary-container: 79, 61, 116;
-	--md-sys-color-on-primary-container: 235, 221, 255;
-	--md-sys-color-secondary: 205, 194, 219;
-	--md-sys-color-on-secondary: 52, 45, 64;
-	--md-sys-color-secondary-container: 75, 67, 88;
-	--md-sys-color-on-secondary-container: 233, 222, 248;
-	--md-sys-color-tertiary: 240, 183, 197;
-	--md-sys-color-on-tertiary: 74, 37, 48;
-	--md-sys-color-tertiary-container: 100, 59, 70;
-	--md-sys-color-on-tertiary-container: 255, 217, 225;
-	--md-sys-color-error: 255, 180, 171;
-	--md-sys-color-on-error: 105, 0, 5;
-	--md-sys-color-error-container: 147, 0, 10;
-	--md-sys-color-on-error-container: 255, 218, 214;
-	--md-sys-color-background: 21, 18, 24;
-	--md-sys-color-on-background: 231, 224, 232;
-	--md-sys-color-surface: 21, 18, 24;
-	--md-sys-color-on-surface: 231, 224, 232;
-	--md-sys-color-surface-variant: 73, 69, 78;
-	--md-sys-color-on-surface-variant: 203, 196, 207;
-	--md-sys-color-outline: 148, 143, 153;
-	--md-sys-color-outline-variant: 73, 69, 78;
-	--md-sys-color-shadow: 0, 0, 0;
-	--md-sys-color-scrim: 0, 0, 0;
-	--md-sys-color-inverse-surface: 231, 224, 232;
-	--md-sys-color-inverse-on-surface: 50, 47, 53;
-	--md-sys-color-inverse-primary: 104, 84, 142;
-	--md-sys-color-primary-fixed: 235, 221, 255;
-	--md-sys-color-on-primary-fixed: 35, 15, 70;
-	--md-sys-color-primary-fixed-dim: 211, 188, 253;
-	--md-sys-color-on-primary-fixed-variant: 79, 61, 116;
-	--md-sys-color-secondary-fixed: 233, 222, 248;
-	--md-sys-color-on-secondary-fixed: 31, 24, 43;
-	--md-sys-color-secondary-fixed-dim: 205, 194, 219;
-	--md-sys-color-on-secondary-fixed-variant: 75, 67, 88;
-	--md-sys-color-tertiary-fixed: 255, 217, 225;
-	--md-sys-color-on-tertiary-fixed: 49, 16, 27;
-	--md-sys-color-tertiary-fixed-dim: 240, 183, 197;
-	--md-sys-color-on-tertiary-fixed-variant: 100, 59, 70;
-	--md-sys-color-surface-dim: 21, 18, 24;
-	--md-sys-color-surface-bright: 59, 56, 62;
-	--md-sys-color-surface-container-lowest: 15, 13, 19;
-	--md-sys-color-surface-container-low: 29, 27, 32;
-	--md-sys-color-surface-container: 33, 31, 36;
-	--md-sys-color-surface-container-high: 44, 41, 47;
-	--md-sys-color-surface-container-highest: 54, 52, 58;
-
 	--elevation-0: 0 0 0 0 #00000026, 0 0 0 0 #0000004d;
 	--elevation-1: 0 1px 3px 1px #00000026, 0 1px 2px 0 #0000004d;
 	--elevation-2: 0 2px 6px 2px #00000026, 0 1px 2px 0 #0000004d;
@@ -92,6 +42,14 @@ html {
 }
 .dcg-calculator-api-container-v1_12 .dcg-header .dcg-header-btn {
 	color: rgb(var(--md-sys-color-on-surface));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-header
+	.align-center-container
+	.dcg-home-link
+	.dcg-desmos-svg-logo {
+	fill: rgb(var(--md-sys-color-primary)) !important;
+	filter: none;
 }
 button.dcg-unstyled-button.dcg-action-opendrawer.dcg-header-btn {
 	width: 40px;
@@ -1218,4 +1176,51 @@ input:where([type='checkbox'][role='switch']):checked:disabled {
 	color: rgb(var(--md-sys-color-surface));
 	background-color: rgba(var(--md-sys-color-on-surface), 0.1);
 	border-color: rgba(var(--md-sys-color-on-surface), 0);
+}
+
+.dcg-dropdown-popover__interior {
+	border-radius: 4px !important;
+	background-color: rgb(var(--md-sys-color-surface-container)) !important;
+	border: none !important;
+	box-shadow: var(--elevation-2) !important;
+}
+.user-info {
+	padding: 0 !important;
+}
+.dcg-calculator-api-container-v1_12 .dcg-account-container a,
+.account-name,
+.account-email {
+	padding: 8px 12px !important;
+	font-family: Roboto, Sans-Serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: rgb(var(--md-sys-color-on-surface));
+}
+.dcg-calculator-api-container-v1_12 .dcg-account-container a.dcg-hovered {
+	text-decoration: none;
+	color: rgb(var(--md-sys-color-on-secondary-container));
+	background: rgb(var(--md-sys-color-secondary-container));
+}
+.account-name {
+	padding: 4px 12px 0 12px !important;
+	font-size: 16px !important;
+	font-weight: 500;
+	line-height: 24px;
+	color: rgba(var(--md-sys-color-on-surface), 0.38) !important;
+	overflow: visible !important;
+}
+.account-email {
+	padding: 0 12px 24px 12px !important;
+	font-size: 14px !important;
+	font-weight: 500;
+	line-height: 20px;
+	color: rgba(var(--md-sys-color-on-surface), 0.38) !important;
+	overflow: visible !important;
+}
+.dcg-dropdown-popover__interior {
+	padding: 8px 0 !important;
+}
+.dcg-arrow {
+	display: none !important;
 }
