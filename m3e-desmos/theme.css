@@ -693,8 +693,8 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-pillbox-btn-interior:not(.dcg-action-zoomrestore).dcg-hovered,
 .dcg-calculator-api-container-v1_12
-	.dcg-btn-flat-gray-group
-	.dcg-pillbox-btn-interior:not(.dcg-action-zoomrestore).dcg-hovered {
+	:has(+ .dcg-popover)
+	.dcg-pillbox-btn-interior:not(.dcg-action-zoomrestore) {
 	color: rgb(var(--md-sys-color-on-secondary-container));
 	background: rgb(var(--md-sys-color-secondary-container)) !important;
 }
@@ -1239,7 +1239,8 @@ input:where([type='checkbox'][role='switch']):checked:disabled {
 }
 .dsm-plugin-section,
 .dsm-category-section,
-.dcg-calculator-api-container-v1_12 .dcg-account-container .user-info, .dcg-popover-interior > * {
+.dcg-calculator-api-container-v1_12 .dcg-account-container .user-info,
+.dcg-popover-interior > * {
 	border-color: rgb(var(--md-sys-color-outline-variant)) !important;
 }
 .dcg-dropdown-popover__interior {
@@ -1288,6 +1289,20 @@ input:where([type='checkbox'][role='switch']):checked:disabled {
 	display: none !important;
 }
 
+.dcg-calculator-api-container-v1_12
+	.dcg-expressions-options-menu
+	.dcg-segmented-control-container,
+.dcg-calculator-api-container-v1_12
+	.dcg-table-column-menu
+	.dcg-segmented-control-container,
+.dcg-calculator-api-container-v1_12
+	.dcg-image-options-menu
+	.dcg-segmented-control-container,
+.dcg-calculator-api-container-v1_12
+	.dcg-generic-options-menu
+	.dcg-segmented-control-container {
+	padding-top: 0;
+}
 .dcg-segmented-control-container.dcg-theme-default {
 	gap: 2px;
 	height: 40px;
