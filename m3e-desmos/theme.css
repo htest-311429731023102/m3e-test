@@ -190,7 +190,7 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 }
 .save-btn-container
 	.dcg-save-button.dcg-dropdown-caret:not(.dcg-disabled):before {
-	content: none;
+	content: none !important;
 }
 .save-btn-container.save-btn-container__split-btn
 	.dcg-save-button.dcg-dropdown-caret {
