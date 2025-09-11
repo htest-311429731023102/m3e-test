@@ -162,7 +162,10 @@
 				margin: 0;
 				overflow: auto;
 				padding: 12px;
-				transition: all 500ms var(--easeInOutCubicEmphasized), background-color 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
+				transition: 
+					all 500ms var(--easeInOutCubicEmphasized),
+					color 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00),
+					background-color 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
 			}
 			body::-webkit-scrollbar {
 				display: none;
@@ -223,9 +226,10 @@
 				height: var(--button-height-medium);
 				padding: 0 var(--button-padding-medium);
 				font-family: "Roboto Flex", Roboto, "Sans Serif";
-				transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90),
-				color 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00),
-				background-color 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
+			    transition: 
+				    all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90),
+					color 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00),
+					background-color 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
 			}
 			button {
 				font-size: 28px;
@@ -318,40 +322,40 @@
 				cursor: pointer;
 			}
 			input[type=range]::-ms-track {
-			  background: transparent;
-			  border-color: transparent;
-			  border-width: 14px 0;
-			  color: transparent;
-			  width: 100%;
-			  height: 16px;
-			  cursor: pointer;
+			    background: transparent;
+				border-color: transparent;
+				border-width: 14px 0;
+				color: transparent;
+				width: 100%;
+				height: 16px;
+				cursor: pointer;
 			}
 			input[type=range]::-ms-fill-lower {
-			  background: rgb(var(--md-sys-color-secondary-container));
-			  border: 6px solid rgba(0, 0, 0, 0);
-			  border-radius: 16px;
+				background: rgb(var(--md-sys-color-secondary-container));
+				border: 6px solid rgba(0, 0, 0, 0);
+				border-radius: 16px;
 			}
 			input[type=range]::-ms-fill-upper {
-			  background: rgb(var(--md-sys-color-secondary-container));
-			  border: 6px solid rgba(0, 0, 0, 0);
-			  border-radius: 16px;
+				background: rgb(var(--md-sys-color-secondary-container));
+				border: 6px solid rgba(0, 0, 0, 0);
+				border-radius: 16px;
 			}
 			input[type=range]::-ms-thumb {
-			  width: 4px;
-			  height: 44px;
-			  background: rgb(var(--md-sys-color-primary));
-			  border: 0px solid rgba(0, 0, 0, 0);
-			  border: 0;
-			  border-radius: 2px;
-			  cursor: pointer;
-			  margin-top: 0px;
-			  /*Needed to keep the Edge thumb centred*/
+				width: 4px;
+				height: 44px;
+				background: rgb(var(--md-sys-color-primary));
+				border: 0px solid rgba(0, 0, 0, 0);
+				border: 0;
+				border-radius: 2px;
+				cursor: pointer;
+				margin-top: 0px;
+				/*Needed to keep the Edge thumb centred*/
 			}
 			input[type=range]:focus::-ms-fill-lower {
-			  background: rgb(var(--md-sys-color-secondary-container));
+				background: rgb(var(--md-sys-color-secondary-container));
 			}
 			input[type=range]:focus::-ms-fill-upper {
-			  background: rgb(var(--md-sys-color-secondary-container));
+				background: rgb(var(--md-sys-color-secondary-container));
 			}
 			/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
 			how to remove the virtical space around the range input in IE*/
@@ -364,90 +368,118 @@
 			}
 			
 			input:where([type="checkbox"][role="switch"]) {
-			  -webkit-appearance: none;
-			  -moz-appearance: none;
-			  appearance: none;
-			  display: flex;
-			  width: 52px;
-			  height: 32px;
-			  align-items: center;
-			  position: relative;
-			  font-size: inherit;
-			  border-radius: 16px;
-			  box-sizing: border-box;
-			  vertical-align: text-bottom;
-			  color: rgb(var(--md-sys-color-outline));
-			  background-color: rgb(var(--md-sys-color-surface-container-highest));
-			  border: 2px solid rgb(var(--md-sys-color-outline));
-			  transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90);
+				-webkit-appearance: none;
+				-moz-appearance: none;
+				appearance: none;
+				display: flex;
+				align-items: center;
+				position: relative;
+				width: 52px;
+				height: 32px;
+				font-size: inherit;
+				box-sizing: border-box;
+				border-radius: 16px;
+				vertical-align: text-bottom;
+				background: rgb(var(--md-sys-color-surface-container-highest));
+				border: 2px solid rgb(var(--md-sys-color-outline));
+				transition: 
+					all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90),
+					background 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00),
+					border-color 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
 			}
 			input:where([type="checkbox"][role="switch"]):before {
-			  content: "";
-			  position: absolute;
-			  left: 8px;
-			  width: 40px;
-			  height: 40px;
-			  margin: -14px;
-			  border-radius: 50%;
-			  box-sizing: content-box;
-			  background: rgba(var(--md-sys-color-on-surface), 0);
-			  transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90);
+				content: "";
+				position: absolute;
+				top: -6px;
+				bottom: -6px;
+				left: -6px;
+				right: calc(100% - 34px);
+				box-sizing: content-box;
+				border-radius: 20px;
+				background: rgba(var(--md-sys-color-on-surface), 0);
+				transition: 
+					all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90),
+					background 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
 			}
 			input:where([type="checkbox"][role="switch"]):after {
-			  content: "";
-			  position: absolute;
-			  left: 8px;
-			  width: 16px;
-			  height: 16px;
-			  margin: -2px;
-			  border-radius: 50%;
-			  box-sizing: content-box;
-			  background: currentcolor;
-			  transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90);
+				content: "";
+				position: absolute;
+				top: 6px;
+				bottom: 6px;
+				left: 6px;
+				right: calc(100% - 22px);
+				box-sizing: content-box;
+				border-radius: 14px;
+				background: rgb(var(--md-sys-color-outline));
+				transition: 
+					all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90),
+					background 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
 			}
-			input:where([type="checkbox"][role="switch"]):not(:disabled):not(:not(:hover):not(:target)) {
-			  color: rgb(var(--md-sys-color-on-surface-variant));
+			input:where([type="checkbox"][role="switch"]):not(:disabled):not(:not(:hover):not(:target)):after {
+				background: rgb(var(--md-sys-color-on-surface-variant));
 			}
-			input:where([type="checkbox"][role="switch"]):not(:disabled):checked:not(:not(:hover):not(:target)) {
-			  color: rgb(var(--md-sys-color-primary-container));
+			input:where([type="checkbox"][role="switch"]):not(:disabled):checked:not(:not(:hover):not(:target)):after {
+				background: rgb(var(--md-sys-color-primary-container));
 			}
 			input:where([type="checkbox"][role="switch"]):checked {
-			  color: rgb(var(--md-sys-color-on-primary));
-			  background-color: rgb(var(--md-sys-color-primary));
-			  border-color: rgb(var(--md-sys-color-primary));
+				background: rgb(var(--md-sys-color-primary));
+				border-color: rgb(var(--md-sys-color-primary));
 			}
 			input:where([type="checkbox"][role="switch"]):checked:before {
-			  left: 28px;
-			  background-color: rgba(var(--md-sys-color-primary), 0);
+				left: calc(100% - 34px);
+				right: -6px;
+				background: rgba(var(--md-sys-color-primary), 0);
 			}
 			input:where([type="checkbox"][role="switch"]):checked:after {
-			  width: 24px;
-			  height: 24px;
-			  left: 24px;
+				top: 2px;
+				bottom: 2px;
+				left: calc(100% - 26px);
+				right: 2px;
+				background: rgb(var(--md-sys-color-on-primary));
 			}
 			input:where([type="checkbox"][role="switch"]):not(:disabled):not(:not(:active):not(:target)):before {
-			  background: rgba(var(--md-sys-color-on-surface), 0.1);
+				background: rgba(var(--md-sys-color-on-surface), 0.1);
 			}
 			input:where([type="checkbox"][role="switch"]):not(:disabled):active:after {
-			  left: 2px;
-			  width: 28px;
-			  height: 28px;
+				top: 0px;
+				bottom: 0px;
+				left: 0px;
+				right: calc(100% - 28px);
+			}
+			input:where([type="checkbox"][role="switch"]):not(:disabled):not(:active):after {
+				transition: 
+					all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90),
+					left 150ms cubic-bezier(0, 0, 0, 1),
+					right 150ms cubic-bezier(0.3, 0, 1, 1),
+					background 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
+			}
+			input:where([type="checkbox"][role="switch"]):checked:not(:disabled):not(:active):after {
+				transition: 
+					all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.90),
+					left 150ms cubic-bezier(0.3, 0, 1, 1),
+					right 150ms cubic-bezier(0, 0, 0, 1),
+					background 150ms cubic-bezier(0.31, 0.94, 0.34, 1.00);
 			}
 			input:where([type="checkbox"][role="switch"]):checked:not(:disabled):not(:not(:active):not(:target)):before {
-			  background: rgba(var(--md-sys-color-primary), 0.1);
+				background: rgba(var(--md-sys-color-primary), 0.1);
 			}
 			input:where([type="checkbox"][role="switch"]):checked:not(:disabled):active:after {
-			  left: 22px;
+				left: calc(100% - 28px);
+				right: 0;
 			}
 			input:where([type="checkbox"][role="switch"]):disabled {
-			  color: rgba(var(--md-sys-color-on-surface), 0.38);
-			  background-color: rgba(var(--md-sys-color-surface-variant), 0.1);
-			  border-color: rgba(var(--md-sys-color-on-surface), 0.1);
+				background-color: rgba(var(--md-sys-color-surface-variant), 0.1);
+				border-color: rgba(var(--md-sys-color-on-surface), 0.1);
+			}
+			input:where([type="checkbox"][role="switch"]):disabled:after {
+				background: rgba(var(--md-sys-color-on-surface), 0.38);
 			}
 			input:where([type="checkbox"][role="switch"]):checked:disabled {
-			  color: rgb(var(--md-sys-color-surface));
-			  background-color: rgba(var(--md-sys-color-on-surface), 0.1);
-			  border-color: rgba(var(--md-sys-color-on-surface), 0);
+				background-color: rgba(var(--md-sys-color-on-surface), 0.1);
+				border-color: rgba(var(--md-sys-color-on-surface), 0);
+			}
+			input:where([type="checkbox"][role="switch"]):checked:disabled:after {
+				background: rgb(var(--md-sys-color-surface));
 			}
 			:has(> input:where([type="checkbox"][role="switch"])) {
 				display: flex;
