@@ -1311,25 +1311,8 @@ button.dcg-btn-slider.dcg-btn-blue {
 	display: none !important;
 }
 
-.dcg-calculator-api-container-v1_12
-	.dcg-expressions-options-menu
-	.dcg-segmented-control-container,
-.dcg-calculator-api-container-v1_12
-	.dcg-table-column-menu
-	.dcg-segmented-control-container,
-.dcg-calculator-api-container-v1_12
-	.dcg-image-options-menu
-	.dcg-segmented-control-container,
-.dcg-calculator-api-container-v1_12
-	.dcg-generic-options-menu
-	.dcg-segmented-control-container {
-	padding-top: 0;
-}
 .dcg-segmented-control-container {
 	gap: 2px;
-	height: 40px;
-	border-radius: 20px;
-	overflow: hidden;
 }
 .dcg-segmented-control-btn {
 	height: 40px;
@@ -1350,6 +1333,18 @@ button.dcg-btn-slider.dcg-btn-blue {
 }
 .dcg-segmented-control-btn:not(.dcg-selected):not(.dcg-disabled):hover {
 	border-radius: 12px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-segmented-control-container
+	.dcg-segmented-control-btn:first-of-type {
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-segmented-control-container
+	.dcg-segmented-control-btn:last-of-type {
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
 }
 .dcg-segmented-control-btn.dcg-disabled {
 	color: rgba(var(--md-sys-color-on-surface), 0.38) !important;
