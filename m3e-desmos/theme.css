@@ -939,11 +939,14 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-calculator-api-container-v1_12 .dcg-top-level-icon i,
 .dcg-calculator-api-container-v1_12 .dcg-ticker .dcg-icon-remove {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 40px;
 	height: 32px;
 	border-radius: 16px;
-	padding: 8px 12px;
-	font-size: 16px;
+	padding: 6px 10px;
+	font-size: 12px;
 	color: rgb(var(--md-sys-color-on-secondary-container));
 	background: rgb(var(--md-sys-color-secondary-container));
 	opacity: 1 !important;
@@ -1322,7 +1325,7 @@ button.dcg-btn-slider.dcg-btn-blue {
 	.dcg-segmented-control-container {
 	padding-top: 0;
 }
-.dcg-segmented-control-container.dcg-theme-default {
+.dcg-segmented-control-container {
 	gap: 2px;
 	height: 40px;
 	border-radius: 20px;
