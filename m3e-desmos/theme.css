@@ -1327,6 +1327,7 @@ button.dcg-btn-slider.dcg-btn-blue {
 }
 .dcg-segmented-control-btn {
 	height: 40px;
+	width: -webkit-fill-available;
 	margin: 0 !important;
 	border-radius: 8px;
 	color: rgb(var(--md-sys-color-on-secondary-container)) !important;
