@@ -780,10 +780,12 @@ body.dsm-better-nav-scrollable-expressions
 	display: none;
 }
 .dcg-calculator-api-container-v1_12 .dcg-ticker {
+	padding: 8px;
 	margin: 8px;
-	border: none;
 	border-radius: 28px;
+	box-shadow: none !important;
 	background: rgb(var(--md-sys-color-secondary-container));
+	border: none;
 	transition:
 		border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9),
 		background 200ms cubic-bezier(0.34, 0.8, 0.34, 1);
@@ -792,6 +794,42 @@ body.dsm-better-nav-scrollable-expressions
 	display: flex;
 	width: calc(100% - 48px);
 	gap: 4px;
+}
+.dcg-calculator-api-container-v1_12 .dcg-top-level-icon i,
+.dcg-calculator-api-container-v1_12 .dcg-ticker .dcg-icon-remove {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 32px;
+	border-radius: 16px;
+	padding: 6px 10px;
+	font-size: 16px;
+	color: rgb(var(--md-sys-color-on-secondary-container));
+	background: rgb(var(--md-sys-color-secondary-container));
+	opacity: 1 !important;
+	transition: border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9);
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-expression-edit-actions
+	.dcg-tooltip-hit-area-container {
+	font-size: 16px;
+}
+.dcg-calculator-api-container-v1_12 .dcg-ticker .dcg-icon-remove {
+	top: 12px;
+	right: 12px;
+	color: rgb(var(--md-sys-color-on-primary));
+	background: rgb(var(--md-sys-color-primary));
+}
+.dcg-calculator-api-container-v1_12 .dcg-top-level-icon i:active,
+.dcg-calculator-api-container-v1_12 .dcg-ticker .dcg-icon-remove:active {
+	border-radius: 8px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-expressionitem:not(.dcg-mathitem).dcg-selected
+	.dcg-top-level-delete {
+	padding-bottom: 8px;
+	padding-left: 12px;
 }
 
 .dcg-calculator-api-container-v1_12
@@ -938,46 +976,6 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-expressionitem.dcg-expressionimage .dcg-image-loaded .dcg-image-title-row {
 	flex-direction: column;
 	align-items: flex-end;
-}
-
-.dcg-calculator-api-container-v1_12 .dcg-ticker {
-	padding: 8px;
-}
-.dcg-calculator-api-container-v1_12 .dcg-top-level-icon i,
-.dcg-calculator-api-container-v1_12 .dcg-ticker .dcg-icon-remove {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 40px;
-	height: 32px;
-	border-radius: 16px;
-	padding: 6px 10px;
-	font-size: 16px;
-	color: rgb(var(--md-sys-color-on-secondary-container));
-	background: rgb(var(--md-sys-color-secondary-container));
-	opacity: 1 !important;
-	transition: border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9);
-}
-.dcg-calculator-api-container-v1_12
-	.dcg-expression-edit-actions
-	.dcg-tooltip-hit-area-container {
-	font-size: 16px;
-}
-.dcg-calculator-api-container-v1_12 .dcg-ticker .dcg-icon-remove {
-	top: 12px;
-	right: 12px;
-	color: rgb(var(--md-sys-color-on-primary));
-	background: rgb(var(--md-sys-color-primary));
-}
-.dcg-calculator-api-container-v1_12 .dcg-top-level-icon i:active,
-.dcg-calculator-api-container-v1_12 .dcg-ticker .dcg-icon-remove:active {
-	border-radius: 8px;
-}
-.dcg-calculator-api-container-v1_12
-	.dcg-expressionitem:not(.dcg-mathitem).dcg-selected
-	.dcg-top-level-delete {
-	padding-bottom: 8px;
-	padding-left: 12px;
 }
 
 .dcg-calculator-api-container-v1_12 .dcg-expression-edit-actions {
@@ -1363,11 +1361,11 @@ button.dcg-btn-slider.dcg-btn-blue {
 	background: rgba(var(--md-sys-color-on-surface), 0.1) !important;
 }
 .dcg-segmented-control-btn.dcg-point-segmented-option {
-	width: 40px !important;
-	height: 40px !important;
+	width: 48px !important;
+	height: 48px !important;
 	max-width: unset !important;
 	max-height: unset !important;
-	border-radius: 20px !important;
+	border-radius: 24px !important;
 	color: rgb(var(--md-sys-color-on-primary-container)) !important;
 	background: rgb(var(--md-sys-color-primary-container)) !important;
 }
@@ -1392,7 +1390,12 @@ button.dcg-btn-slider.dcg-btn-blue {
 	.dcg-generic-options-menu
 	.dcg-point-segmented-option
 	i {
-	font-size: 24px;
+	font-size: 32px;
+}
+
+.dcg-calculator-api-container-v1_12 .dcg-slider-options-view {
+	min-width: 232px;
+	padding: 12px;
 }
 
 .dcg-mq-bracket-container.dcg-mq-non-leaf {
@@ -1442,7 +1445,7 @@ button.dcg-btn-slider.dcg-btn-blue {
 	position: relative;
 	width: 32px !important;
 	height: 32px !important;
-	border-radius: 8px !important;
+	border-radius: 8px;
 	box-shadow:
 		var(--elevation-0),
 		inset 0 0 0 0 rgb(var(--md-sys-color-surface-container-high)) !important;
@@ -1451,7 +1454,7 @@ button.dcg-btn-slider.dcg-btn-blue {
 .dcg-color-picker-container .dcg-color-swatch {
 	width: 40px !important;
 	height: 40px !important;
-	border-radius: 0 !important;
+	border-radius: 0;
 	border: 0 solid rgb(var(--md-sys-color-tertiary));
 	box-shadow:
 		var(--elevation-0),
@@ -1463,11 +1466,9 @@ button.dcg-btn-slider.dcg-btn-blue {
 		opacity 300ms cubic-bezier(0.34, 0.88, 0.34, 1);
 }
 .dcg-color-picker-container .dcg-color-swatch:hover {
-	border-radius: 12px !important;
+	border-radius: 12px;
 	border-width: 2px;
-	box-shadow:
-		var(--elevation-2),
-		inset 0 0 0 2px rgb(var(--md-sys-color-surface-container-high)) !important;
+	box-shadow: inset 0 0 0 2px rgb(var(--md-sys-color-surface-container-high)) !important;
 	opacity: 1;
 	z-index: 1;
 }
@@ -1480,6 +1481,9 @@ button.dcg-btn-slider.dcg-btn-blue {
 	.dcg-color-picker-menu
 	.dcg-color-tile
 	i.dcg-icon-check {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	z-index: 1;
 }
 .dcg-calculator-api-container-v1_12 .dcg-color-picker-container {
@@ -1503,15 +1507,14 @@ button.dcg-btn-slider.dcg-btn-blue {
 	font-size: 14px !important;
 	line-height: 20px !important;
 	border-radius: 18px !important;
-	background: rgb(var(--md-sys-color-tertiary-container)) !important;
-	border: 2px solid rgb(var(--md-sys-color-tertiary)) !important;
+	background: rgb(var(--md-sys-color-tertiary)) !important;
+	border: none !important;
 }
 .dcg-tooltip-message-container * {
-	color: rgb(var(--md-sys-color-on-tertiary-container)) !important;
+	color: rgb(var(--md-sys-color-on-tertiary)) !important;
 }
 .dcg-tooltip-arrow {
 	top: calc(100% - 2px) !important;
-	left: calc(50% - 1px) !important;
 	width: 2px !important;
 	height: 16px !important;
 	background: rgb(var(--md-sys-color-tertiary)) !important;
@@ -1535,6 +1538,10 @@ button.dcg-btn-slider.dcg-btn-blue {
 	box-shadow: var(--elevation-5) !important;
 	background: rgb(var(--md-sys-color-surface-container)) !important;
 	border: none !important;
+}
+.dcg-calculator-api-container-v1_12 .dcg-expressions-options-menu,
+.dcg-calculator-api-container-v1_12 .dcg-slider-options-view {
+	top: -86px;
 }
 .dcg-calculator-api-container-v1_12 .dcg-options-menu-section {
 	position: relative;
@@ -1569,4 +1576,124 @@ button.dcg-btn-slider.dcg-btn-blue {
 }
 .dcg-options-right-side .dcg-segmented-control-container {
 	width: fit-content;
+}
+
+.dcg-calculator-api-container-v1_12 .dcg-label-orientation-view {
+	width: 200px;
+	height: 200px;
+}
+.dcg-label-orientation-view:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background: rgb(var(--md-sys-color-surface-container-highest));
+}
+.dcg-label-orientation-view {
+	display: flex !important;
+	align-items: center;
+	justify-content: center;
+}
+.dcg-orientation-option {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	top: calc(50% - 10px) !important;
+	left: calc(50% - 10px) !important;
+	width: 20px !important;
+	height: 20px !important;
+	border: 2px solid rgb(var(--md-sys-color-on-surface-variant));
+	transform: none !important;
+	transition: border-color 300ms cubic-bezier(0.34, 0.88, 0.34, 1);
+}
+.dcg-orientation-option i {
+	display: block;
+	top: unset !important;
+	width: 10px !important;
+	height: 10px !important;
+	border-radius: 50%;
+	background: rgb(var(--md-sys-color-on-surface-variant));
+	scale: 0;
+	transition:
+		scale 350ms cubic-bezier(0.27, 1.06, 0.18, 1),
+		background 300ms cubic-bezier(0.34, 0.88, 0.34, 1);
+}
+.dcg-orientation-option:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	scale: 0.9;
+	background: rgba(var(--md-sys-color-primary), 0);
+	transition:
+		scale 350ms cubic-bezier(0.27, 1.06, 0.18, 1),
+		background 300ms cubic-bezier(0.34, 0.88, 0.34, 1);
+}
+.dcg-orientation-option i:before {
+	content: none !important;
+}
+.dcg-orientation-option:hover:before,
+.dcg-orientation-option.dcg-selected:active:before {
+	scale: 1;
+	background: rgba(var(--md-sys-color-on-surface), 0.1);
+	transition:
+		scale 200ms cubic-bezier(0, 0, 0, 1),
+		background 300ms cubic-bezier(0.34, 0.88, 0.34, 1);
+}
+.dcg-orientation-option.dcg-selected {
+	border-color: rgb(var(--md-sys-color-primary));
+}
+.dcg-orientation-option:active:before,
+.dcg-orientation-option.dcg-selected:hover:before {
+	background: rgba(var(--md-sys-color-on-surface), 0.1);
+}
+.dcg-orientation-option.dcg-selected i {
+	background: rgb(var(--md-sys-color-primary));
+	scale: 1;
+}
+.dcg-orientation-option.dcg-orientation-disabled {
+	border-color: rgba(var(--md-sys-color-on-surface), 0.38);
+}
+.dcg-orientation-option.dcg-orientation-disabled i {
+	background: rgba(var(--md-sys-color-on-surface), 0.38);
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-label-orientation-view
+	.dcg-vertical-orientation-indicator:after,
+.dcg-calculator-api-container-v1_12
+	.dcg-label-orientation-view
+	.dcg-label-orientation-center:after {
+	content: none;
+}
+.dcg-vertical-orientation-indicator {
+	top: unset !important;
+	left: unset !important;
+	width: 180px !important;
+	height: 180px !important;
+	margin: 0 !important;
+	background: rgba(var(--md-sys-color-tertiary), 0.5);
+	mask-image: url("data:image/svg+xml,%3Csvg width='180' height='180' viewBox='0 0 180 180' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.38' d='M124.305 49.6927C119.943 42.7706 115.503 35.7526 109.605 30.2561C103.707 24.7458 96.067 20.853 88.233 21.3602C81.3541 21.8125 74.9786 25.6231 69.9452 30.5988C64.9119 35.5744 61.0014 41.7015 57.1554 47.7737C46.7532 64.1674 36.338 80.561 25.9358 96.9684C20.9928 104.754 15.9208 112.882 14.5527 122.162C12.9008 133.374 17.3533 144.792 25.2518 152.249C33.5116 160.048 46.8951 159.418 56.9489 157.28C67.9706 154.936 78.7471 150.522 89.9882 150.536C99.6161 150.536 108.921 153.798 118.291 156.169C127.648 158.527 137.702 159.98 146.736 156.471C157.951 152.126 166.005 139.776 165.785 127.097C165.579 115.528 153.241 95.5703 153.241 95.5703C153.241 95.5703 133.948 64.9865 124.305 49.6927Z' fill='%23CDC991'/%3E%3C/svg%3E%0A");
+}
+.dcg-orientation-option[class*='above'] {
+	top: calc(50% - 10px - 48px) !important;
+}
+.dcg-orientation-option[class*='below'] {
+	top: calc(50% - 10px + 48px) !important;
+}
+.dcg-orientation-option[class*='left'] {
+	left: calc(50% - 10px - 48px) !important;
+}
+.dcg-orientation-option[class*='right'] {
+	left: calc(50% - 10px + 48px) !important;
+}
+
+.dcg-calculator-api-container-v1_12 .dcg-tooltipped-error {
+	color: rgb(var(--md-sys-color-error));
+}
+.dcg-calculator-api-container-v1_12 .dcg-invalid {
+	border-color: rgb(var(--md-sys-color-error)) !important;
 }
