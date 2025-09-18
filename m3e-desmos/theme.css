@@ -368,12 +368,11 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 }
 @keyframes dcg-newExpression {
 	0% {
-		scale: 1 0;
+		scale: 0 1;
 	}
 }
 .dcg-expressionitem {
-	transform-origin: top;
-	animation: 400ms 1 cubic-bezier(0.05, 0.7, 0.1, 1) dcg-newExpression;
+	animation: 300ms 1 cubic-bezier(0.05, 0.7, 0.1, 1) dcg-newExpression;
 }
 
 .dcg-exppanel .dcg-expressionitem:not(.dcg-new-expression):hover {
