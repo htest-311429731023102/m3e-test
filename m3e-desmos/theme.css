@@ -510,7 +510,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	position: relative;
 	border: none;
 	opacity: 1 !important;
-	font-family: dcg-icons-09-10-2025;
+	font-family: dcg-icons-09-24-2025;
 	font-size: 110%;
 }
 .dcg-calculator-api-container-v1_12
@@ -644,7 +644,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	content: '\\e256';
 	speak: never;
 	color: rgb(var(--md-sys-color-on-primary));
-	font-family: dcg-icons-09-10-2025 !important;
+	font-family: dcg-icons-09-24-2025 !important;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
@@ -1020,7 +1020,7 @@ body.dsm-better-nav-scrollable-expressions
 	height: 32px;
 	border-radius: 16px;
 	padding: 6px 10px;
-	font-size: 16px;
+	font-size: 12px;
 	color: rgb(var(--md-sys-color-on-secondary-container));
 	background: rgb(var(--md-sys-color-secondary-container));
 	opacity: 1 !important;
@@ -1039,7 +1039,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-expression-edit-actions
 	.dcg-tooltip-hit-area-container {
-	font-size: 16px;
+	font-size: 12px;
 }
 .dcg-calculator-api-container-v1_12 .dcg-ticker .dcg-icon-remove {
 	top: 12px;
@@ -1226,7 +1226,7 @@ body.dsm-better-nav-scrollable-expressions
 	margin-right: 20px;
 	margin-top: 0;
 	text-align: center;
-	font-size: 16px;
+	font-size: 12px;
 	line-height: 24px;
 	opacity: 1;
 	border-radius: 16px;
@@ -1321,7 +1321,7 @@ body.dsm-better-nav-scrollable-expressions
 	.btns
 	*
 	.dcg-slider-btn-container
-	.dcg-btn-light-gray {
+	.dcg-btn-slider {
 	height: 32px;
 	font-size: 14px;
 	line-height: 20px;
