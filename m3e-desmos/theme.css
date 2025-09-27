@@ -1110,18 +1110,18 @@ body.dsm-better-nav-scrollable-expressions
 		background 200ms cubic-bezier(0.34, 0.8, 0.34, 1);
 }
 .dcg-exppanel
-	.dcg-do-not-blur.dcg-expressionitem.dcg-inFolder:has(
-		+ *:not(.dcg-do-not-blur.dcg-expressionitem.dcg-inFolder)
+	.dcg-expressionitem.dcg-inFolder:has(
+		+ *:not(.dcg-expressionitem.dcg-inFolder)
 	):before {
 	border-bottom-left-radius: 4px;
 	border-bottom-right-radius: 4px;
 	height: calc(100% + 12px);
 }
 .dcg-exppanel
-	.dcg-do-not-blur.dcg-expressionitem.dcg-inFolder:has(
+	.dcg-expressionitem.dcg-inFolder:has(
 		+ *:not(.dcg-do-not-blur.dcg-expressionitem.dcg-inFolder)
 	):hover:before,
-.dcg-do-not-blur.dcg-expressionitem.dcg-inFolder:last-child:before {
+.dcg-expressionitem.dcg-inFolder:last-child:before {
 	border-bottom-left-radius: 16px;
 	border-bottom-right-radius: 16px;
 	height: calc(100% + 12px);
@@ -1132,7 +1132,10 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-exppanel
 	.dcg-selected.dcg-expressionfolder
-	~ .dcg-inFolder:has(~ :not(.dcg-inFolder)):before {
+	~ .dcg-inFolder:has(~ :not(.dcg-inFolder)):before,
+.dcg-exppanel
+	.dcg-selected.dcg-expressionfolder
+	~ .dcg-expressionitem.dcg-inFolder:last-child:before {
 	background: rgb(var(--md-sys-color-primary-container)) !important;
 }
 .dcg-exppanel
