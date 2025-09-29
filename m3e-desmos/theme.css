@@ -168,11 +168,21 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	color: rgba(var(--md-sys-color-on-surface), 0.38) !important;
 	background: rgba(var(--md-sys-color-on-surface), 0.1) !important;
 }
+@keyframes dcg-splitButton-scaleOut {
+	0% {
+		scale: 0;
+	}
+	100% {
+		scale: 1;
+	}
+}
 .save-btn-container__split-btn .dcg-save-button {
 	padding: 0 12px 0 16px !important;
 }
 .save-btn-container .dcg-save-button.dcg-dropdown-caret {
 	padding: 0 14px 0 12px !important;
+	transform-origin: left;
+	animation: 300ms dcg-splitButton-scaleOut cubic-bezier(0.05, 0.7, 0.1, 1);
 }
 .save-btn-container .dcg-save-button.dcg-dropdown-caret i {
 	display: block;
@@ -1139,10 +1149,9 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-exppanel
 	.dcg-selected.dcg-expressionfolder
-	~ .dcg-inFolder:has(~ :not(.dcg-inFolder)):before,
-.dcg-exppanel
-	.dcg-selected.dcg-expressionfolder
-	~ .dcg-expressionitem.dcg-inFolder:last-child:before {
+	~ .dcg-inFolder:not(
+		.dcg-selected.dcg-expressionfolder ~ :not(.dcg-inFolder) ~ *
+	):before {
 	background: rgb(var(--md-sys-color-primary-container)) !important;
 }
 .dcg-exppanel
