@@ -1,16 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
-@font-face {
-	font-family: 'dcg-material-icons';
-	src:
-		url('https://github.com/htest-311429731023102/m3e-test/raw/refs/heads/main/dcg-material-icons/dcg-material-icons.woff2')
-			format('woff2'),
-		url('https://github.com/htest-311429731023102/m3e-test/raw/refs/heads/main/dcg-material-icons/dcg-material-icons.woff')
-			format('woff'),
-		url('https://github.com/htest-311429731023102/m3e-test/raw/refs/heads/main/dcg-material-icons/dcg-material-icons.ttf')
-			format('truetype');
-}
-
 :root {
 	--md-sys-color-primary: 211, 188, 253;
 	--md-sys-color-surface-tint: 211, 188, 253;
@@ -73,15 +62,9 @@
 body {
 	background: rgb(var(--md-sys-color-surface-container-low));
 }
-
 body,
 html {
 	font-family: Roboto, sans-serif;
-}
-
-:not(.dcg-grapher-3d) > * > .dcg-graph-inner {
-	color: rgb(var(--md-sys-color-on-surface));
-	background: rgb(var(--md-sys-color-surface));
 }
 .dcg-graph-outer {
 	box-shadow: inset var(--elevation-2);
@@ -361,6 +344,27 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	.dcg-expression-top-bar:has(.dcg-action-clearall)
 	.dcg-center-buttons {
 	display: none;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-advanced-graph-settings-view
+	.dcg-advanced-toggle,
+.dcg-calculator-api-container-v1_12
+	.dcg-options-menu
+	.dcg-checkbox
+	.dcg-checkbox__content,
+.dsm-plugin-title-bar {
+	color: rgb(var(--md-sys-color-on-surface));
+}
+.dsm-plugin-info-body {
+	color: rgb(var(--md-sys-color-on-surface-variant));
+}
+.dcg-sliding-interior .dcg-popover .dcg-popover-title {
+	font-family: roboto, sans-serif;
+	font-size: 22px;
+	font-weight: 400;
+	line-height: 28px;
+	color: rgb(var(--md-sys-color-on-surface)) !important;
+	border: none !important;
 }
 
 .dcg-expressionlist {
@@ -1086,6 +1090,9 @@ body.dsm-better-nav-scrollable-expressions
 	.dcg-circular-icon.dcg-thick-outline {
 	border-radius: 12px;
 }
+.dcg-calculator-api-container-v1_12 .dcg-ticker .dcg-ticker-settings-internal {
+	padding: 0;
+}
 .dcg-ticker .dcg-mq-root-block {
 	color: rgb(var(--md-sys-color-on-primary-container));
 }
@@ -1608,6 +1615,10 @@ body.dsm-better-nav-scrollable-expressions
 	height: 40px;
 	width: -webkit-fill-available;
 	margin: 0 !important;
+	font-family: Roboto, Sans-Serif;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
 	border-radius: 8px;
 	color: rgb(var(--md-sys-color-on-secondary-container)) !important;
 	background: rgb(var(--md-sys-color-secondary-container)) !important;
@@ -1814,10 +1825,6 @@ body.dsm-better-nav-scrollable-expressions
 	background: rgb(var(--md-sys-color-surface-container)) !important;
 	border: none !important;
 }
-.dcg-calculator-api-container-v1_12 .dcg-expressions-options-menu,
-.dcg-calculator-api-container-v1_12 .dcg-slider-options-view {
-	top: -86px;
-}
 .dcg-calculator-api-container-v1_12 .dcg-options-menu-section {
 	position: relative;
 	padding: 12px !important;
@@ -1826,11 +1833,12 @@ body.dsm-better-nav-scrollable-expressions
 	background: rgb(var(--md-sys-color-surface-container-high));
 	border-top: none !important;
 }
-.dcg-calculator-api-container-v1_12 .dcg-options-menu-section:first-of-type {
+.dcg-calculator-api-container-v1_12 :nth-child(1 of .dcg-options-menu-section) {
 	border-top-left-radius: 16px;
 	border-top-right-radius: 16px;
 }
-.dcg-calculator-api-container-v1_12 .dcg-options-menu-section:last-of-type {
+.dcg-calculator-api-container-v1_12
+	:nth-last-child(1 of .dcg-options-menu-section) {
 	border-bottom-left-radius: 16px;
 	border-bottom-right-radius: 16px;
 }
