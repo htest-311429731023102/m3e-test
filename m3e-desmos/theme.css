@@ -1559,7 +1559,7 @@ body.dsm-better-nav-scrollable-expressions
 	position: relative;
 	right: 24px;
 	padding: 16px !important;
-	border-radius: 12px !important;
+	border-radius: 28px !important;
 	color: rgb(var(--md-sys-color-on-surface)) !important;
 	background: rgb(var(--md-sys-color-surface-container)) !important;
 	border: none !important;
@@ -1641,6 +1641,9 @@ body.dsm-better-nav-scrollable-expressions
 		color 150ms cubic-bezier(0.31, 0.94, 0.34, 1),
 		background 150ms cubic-bezier(0.31, 0.94, 0.34, 1);
 }
+.dcg-segmented-control-btn i {
+	font-size: 16px;
+}
 .dcg-segmented-control-btn.dcg-selected {
 	border-radius: 20px;
 	color: rgb(var(--md-sys-color-on-secondary)) !important;
@@ -1702,8 +1705,71 @@ body.dsm-better-nav-scrollable-expressions
 }
 
 .dcg-calculator-api-container-v1_12 .dcg-slider-options-view {
-	min-width: 232px;
+	min-width: 280px;
+	max-width: 560px;
 	padding: 12px;
+}
+.dcg-slider-speed-container {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-slider-speed-container
+	.dcg-action-faster,
+.dcg-calculator-api-container-v1_12
+	.dcg-slider-speed-container
+	.dcg-action-slower {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 56px;
+	height: 56px;
+	font-size: 16px;
+	border-radius: 28px;
+	color: rgb(var(--md-sys-color-on-primary)) !important;
+	background: rgb(var(--md-sys-color-primary)) !important;
+	border: none;
+	transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9);
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-slider-speed-container
+	.dcg-action-faster:not(.dcg-disabled):active,
+.dcg-calculator-api-container-v1_12
+	.dcg-slider-speed-container
+	.dcg-action-slower:not(.dcg-disabled):active {
+	width: 72px;
+	border-radius: 16px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-slider-speed-container:has(.dcg-action-slower:not(.dcg-disabled):active)
+	.dcg-action-faster,
+.dcg-calculator-api-container-v1_12
+	.dcg-slider-speed-container:has(.dcg-action-faster:not(.dcg-disabled):active)
+	.dcg-action-slower {
+	width: 40px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-slider-speed-container
+	.dcg-action-faster.dcg-disabled,
+.dcg-calculator-api-container-v1_12
+	.dcg-slider-speed-container
+	.dcg-action-slower.dcg-disabled {
+	color: rgba(var(--md-sys-color-on-surface), 0.38) !important;
+	background: rgba(var(--md-sys-color-primary), 0.1) !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-slider-speed-container
+	.dcg-variable-speed {
+	order: -1;
+	align-content: center;
+	width: 56px;
+	height: 56px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	border-radius: 8px;
+	background: rgb(var(--md-sys-color-surface-container-high));
 }
 
 .dcg-mq-bracket-container.dcg-mq-non-leaf {
@@ -1834,17 +1900,35 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-options-menu {
 	max-height: 480px;
 	overflow-y: auto;
-	box-shadow: var(--elevation-5) !important;
+	padding: 12px !important;
+	border-radius: 28px !important;
+	box-shadow: var(--elevation-3) !important;
 	background: rgb(var(--md-sys-color-surface-container)) !important;
 	border: none !important;
 }
 .dcg-calculator-api-container-v1_12 .dcg-options-menu-section {
 	position: relative;
 	padding: 12px !important;
-	margin: 4px 8px !important;
+	margin: 0 !important;
 	border-radius: 4px;
 	background: rgb(var(--md-sys-color-surface-container-high));
 	border-top: none !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-expressions-options-menu
+	.dcg-options-menu-section:not(:first-of-type),
+.dcg-calculator-api-container-v1_12
+	.dcg-table-column-menu
+	.dcg-options-menu-section:not(:first-of-type),
+.dcg-calculator-api-container-v1_12
+	.dcg-image-options-menu
+	.dcg-options-menu-section:not(:first-of-type),
+.dcg-calculator-api-container-v1_12
+	.dcg-generic-options-menu
+	.dcg-options-menu-section:not(:first-of-type),
+.dcg-calculator-api-container-v1_12
+	.dcg-options-menu-section:not(:nth-child(1 of .dcg-options-menu-section)) {
+	margin-top: 4px !important;
 }
 .dcg-calculator-api-container-v1_12 :nth-child(1 of .dcg-options-menu-section) {
 	border-top-left-radius: 16px;
@@ -1906,9 +1990,9 @@ body.dsm-better-nav-scrollable-expressions
 	left: calc(50% - 10px) !important;
 	width: 20px !important;
 	height: 20px !important;
-	border: 2px solid rgb(var(--md-sys-color-on-surface-variant));
+	box-shadow: inset 0 0 0 2px rgb(var(--md-sys-color-on-surface-variant));
 	transform: none !important;
-	transition: border-color 300ms cubic-bezier(0.34, 0.88, 0.34, 1);
+	transition: box-shadow 300ms cubic-bezier(0.34, 0.88, 0.34, 1);
 }
 .dcg-orientation-option i {
 	display: block;
@@ -1930,7 +2014,7 @@ body.dsm-better-nav-scrollable-expressions
 	height: 40px;
 	border-radius: 50%;
 	scale: 0.9;
-	background: rgba(var(--md-sys-color-primary), 0);
+	background: rgba(var(--md-sys-color-on-surface), 0);
 	transition:
 		scale 350ms cubic-bezier(0.27, 1.06, 0.18, 1),
 		background 300ms cubic-bezier(0.34, 0.88, 0.34, 1);
@@ -1947,7 +2031,7 @@ body.dsm-better-nav-scrollable-expressions
 		background 300ms cubic-bezier(0.34, 0.88, 0.34, 1);
 }
 .dcg-orientation-option.dcg-selected {
-	border-color: rgb(var(--md-sys-color-primary));
+	box-shadow: inset 0 0 0 2px rgb(var(--md-sys-color-primary));
 }
 .dcg-orientation-option:active:before,
 .dcg-orientation-option.dcg-selected:hover:before {
