@@ -2003,8 +2003,12 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-tooltip-positioning-container:not(
 		[style='top:4px;left:0px;width:56px;height:56px']
+	):not([style*='top:18px'][style*='height:40px']):not(
+		[style*='width:22px;height:46px']
 	)
-	.dcg-tooltip-message-container[style^='top:100%;width:200px;transform:translate(-50%, 0);'],
+	.dcg-tooltip-message-container[style^='top:100%;width:200px;transform:translate(-50%, 0);']:not(
+		[style='top:100%;width:200px;transform:translate(-50%, 0);left:20px;margin-top:5px;text-align:center']
+	),
 .dcg-tooltip-positioning-container[style*='width:40px'][style*='height:40px']
 	.dcg-tooltip-message-container[style^='top:100%;width:200px;transform:translate(-50%, 0);'] {
 	top: unset !important;
@@ -2014,13 +2018,30 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-tooltip-positioning-container:not(
 		[style='top:4px;left:0px;width:56px;height:56px']
+	):not([style*='top:18px'][style*='height:40px']):not(
+		[style*='width:22px;height:46px']
 	)
-	.dcg-tooltip-message-container[style^='top:100%;width:200px;transform:translate(-50%, 0);']
+	.dcg-tooltip-message-container[style^='top:100%;width:200px;transform:translate(-50%, 0);']:not(
+		[style='top:100%;width:200px;transform:translate(-50%, 0);left:20px;margin-top:5px;text-align:center']
+	)
 	.dcg-tooltip-message,
 .dcg-tooltip-positioning-container[style*='width:40px'][style*='height:40px']
 	.dcg-tooltip-message-container[style^='top:100%;width:200px;transform:translate(-50%, 0);']
 	.dcg-tooltip-message {
 	transform-origin: 50% calc(100% + 16px) !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-tooltip-message-container
+	.dcg-tooltip-message.dcg-text-selectable {
+	border-radius: 12px !important;
+	color: rgb(var(--md-sys-color-on-surface-variant)) !important;
+	background: rgb(var(--md-sys-color-surface-container)) !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-tooltip-message-container
+	.dcg-tooltip-message.dcg-text-selectable
+	.dcg-white-link {
+	color: rgb(var(--md-sys-color-primary)) !important;
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-tooltip-positioning-container.dcg-tooltip-theme-light
