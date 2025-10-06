@@ -1,4 +1,4 @@
-const darkMode = true;
+const theme = 'dark';
 
 (async () => {
 	const {
@@ -76,22 +76,25 @@ const darkMode = true;
 		return `${redFromArgb(value)}, ${greenFromArgb(value)}, ${blueFromArgb(value)}`;
 	}
 
-	function setSchemeProperties(target, scheme, suffix = '') {
+	function setSchemeProperties(target, scheme, suffix = '', name = '') {
 		for (const [key, value] of Object.entries(scheme.toJSON())) {
 			const token = key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 			const color = rgbFromArgb(value);
-			target.style.setProperty(`--md-sys-color-${token}${suffix}`, color);
+			target.style.setProperty(
+				`--md-sys-color${name}-${token}${suffix}`,
+				color
+			);
 		}
 	}
 
-	function applyTheme(theme, options) {
+	function applyTheme(theme, options, name = '') {
 		const target = options?.target || document.body;
 		const isDark = options?.dark ?? false;
 		const scheme = isDark ? theme.schemes.dark : theme.schemes.light;
-		setSchemeProperties(target, scheme);
+		setSchemeProperties(target, scheme, '', name);
 		if (options?.brightnessSuffix) {
-			setSchemeProperties(target, theme.schemes.dark, '-dark');
-			setSchemeProperties(target, theme.schemes.light, '-light');
+			setSchemeProperties(target, theme.schemes.dark, '-dark', name);
+			setSchemeProperties(target, theme.schemes.light, '-light', name);
 		}
 		if (options?.paletteTones) {
 			const tones = options?.paletteTones ?? [];
@@ -108,16 +111,16 @@ const darkMode = true;
 		}
 	}
 
-	function setTheme(sourceColor, dark) {
+	function setTheme(sourceColor, dark, name = '') {
 		const theme = themeFromSourceColor(argbFromHex(sourceColor));
 
 		// Check if the user has dark mode turned on
 		// const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 		// Apply the theme to the body by updating custom properties for material tokens
-		applyTheme(theme, { target: document.documentElement, dark: dark });
-		const missing = getMissingColorMap(theme, dark ? 'dark' : 'light');
+		applyTheme(theme, { target: document.body, dark: dark }, name);
+		const missing = getMissingColorMap(theme, dark);
 		missing.forEach((color, token) =>
-			document.documentElement.style.setProperty(token, color)
+			document.body.style.setProperty(token, color)
 		);
 	}
 	window.setTheme = setTheme;
@@ -126,7 +129,10 @@ const darkMode = true;
 		const dsmColor = DSM?.pluginSettings?.['set-primary-color']?.primaryColor;
 		if (dsmColor && dsmColor !== color) {
 			color = dsmColor;
-			setTheme(color, darkMode);
+			setTheme(color, theme);
 		}
 	}, 10);
+	setTheme('#048218', theme, '-graphing');
+	setTheme('#9b2cc2', theme, '-geometry');
+	setTheme('#ea4bd1', theme, '-3d');
 })();
