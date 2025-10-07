@@ -1,4 +1,4 @@
-const theme = 'dark';
+const darkMode = true;
 
 (async () => {
 	const {
@@ -117,10 +117,10 @@ const theme = 'dark';
 		// Check if the user has dark mode turned on
 		// const systemDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 		// Apply the theme to the body by updating custom properties for material tokens
-		applyTheme(theme, { target: document.body, dark: dark }, name);
-		const missing = getMissingColorMap(theme, dark);
+		applyTheme(theme, { target: document.documentElement, dark: dark }, name);
+		const missing = getMissingColorMap(theme, dark ? 'dark' : 'light');
 		missing.forEach((color, token) =>
-			document.body.style.setProperty(token, color)
+			document.documentElement.style.setProperty(token, color)
 		);
 	}
 	window.setTheme = setTheme;
@@ -129,10 +129,10 @@ const theme = 'dark';
 		const dsmColor = DSM?.pluginSettings?.['set-primary-color']?.primaryColor;
 		if (dsmColor && dsmColor !== color) {
 			color = dsmColor;
-			setTheme(color, theme);
+			setTheme(color, darkMode);
 		}
 	}, 10);
-	setTheme('#048218', theme, '-graphing');
-	setTheme('#9b2cc2', theme, '-geometry');
-	setTheme('#ea4bd1', theme, '-3d');
+	setTheme('#048218', darkMode, '-graphing');
+	setTheme('#9b2cc2', darkMode, '-geometry');
+	setTheme('#ea4bd1', darkMode, '-3d');
 })();
