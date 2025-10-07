@@ -168,12 +168,13 @@ button.dcg-unstyled-button.dcg-action-opendrawer.dcg-header-btn {
 	display: none;
 }
 
-.save-btn-container.save-btn-container__split-btn {
+.save-btn-container.save-btn-container__split-btn,
+.dcg-new-my-graphs-item__dropdown-section {
 	gap: 2px;
 }
-.dcg-save-button {
+.dcg-calculator-api-container-v1_12 .dcg-save-button {
 	height: 40px !important;
-	padding: 0 16px !important;
+	padding: 10px 16px !important;
 	border-radius: 20px !important;
 	color: rgb(var(--md-sys-color-on-primary)) !important;
 	background: rgb(var(--md-sys-color-primary)) !important;
@@ -203,19 +204,21 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 .save-btn-container .dcg-save-button.dcg-dropdown-caret i {
 	display: block;
 	width: 20px;
-	rotate: 180deg;
-	transition: rotate 150ms cubic-bezier(0.32, 0, 0, 1);
+	rotate: 0deg;
+	transition: rotate 250ms cubic-bezier(0.2, 0, 0, 1);
 }
 .save-btn-container
 	.dcg-save-button.dcg-dropdown-caret[aria-expanded='true']
 	i {
-	rotate: 0deg;
+	rotate: 180deg;
 }
 .save-btn-container.save-btn-container
 	.dcg-save-button:not(.dcg-dropdown-caret) {
 	font-family: Roboto, Sans-Serif;
 	font-size: 14px;
 	font-weight: 500;
+	line-height: 20px;
+	letter-spacing: 0.1px;
 }
 .save-btn-container.save-btn-container__split-btn
 	.dcg-save-button:not(.dcg-dropdown-caret) {
@@ -253,6 +256,68 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	font-weight: 400;
 	line-height: 24px;
 	color: rgb(var(--md-sys-color-on-surface)) !important;
+}
+
+.dcg-calculator-api-container-v1_12 .dcg-new-my-graphs-item__button {
+	gap: 8px;
+	height: 56px !important;
+	font-family: Roboto, Sans-Serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	letter-spacing: 0.15px;
+	padding: 16px 24px !important;
+	border-radius: 28px 4px 4px 28px !important;
+	color: rgb(var(--md-sys-color-on-primary)) !important;
+	background: rgb(var(--md-sys-color-primary)) !important;
+	border: none !important;
+	transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9) !important;
+}
+.dcg-calculator-api-container-v1_12 .dcg-my-graphs-modal__add-product-icon {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 20px;
+	padding: 2px;
+	margin-right: 0;
+	color: rgb(var(--md-sys-color-on-primary)) !important;
+}
+.dcg-calculator-api-container-v1_12 .dcg-new-my-graphs-item__button:hover {
+	border-radius: 28px 12px 12px 28px !important;
+}
+.dcg-calculator-api-container-v1_12 .dcg-new-my-graphs-item__dropdown {
+	display: block;
+	height: 56px !important;
+	padding: 15px 23.5px 15px 19.5px !important;
+	margin-left: 0.5px;
+	border-radius: 4px 28px 28px 4px !important;
+	color: rgb(var(--md-sys-color-on-primary)) !important;
+	background: rgb(var(--md-sys-color-primary)) !important;
+	border: none !important;
+	transition: all 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9) !important;
+}
+.dcg-calculator-api-container-v1_12 .dcg-new-my-graphs-item__dropdown:hover {
+	border-radius: 12px 28px 28px 12px !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-popover-with-anchor__open
+	.dcg-new-my-graphs-item__dropdown {
+	padding: 15px 21.5px !important;
+	border-radius: 28px !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-new-my-graphs-item__dropdown
+	.dcg-icon-caret-down {
+	display: block;
+	font-size: 13px;
+	line-height: 26px;
+	rotate: 0deg;
+	transition: rotate 250ms cubic-bezier(0.2, 0, 0, 1);
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-popover-with-anchor__open
+	.dcg-new-my-graphs-item__dropdown
+	.dcg-icon-caret-down {
+	rotate: 180deg;
 }
 
 .dcg-calculator-api-container-v1_12 .dcg-btn-blue {
@@ -2547,7 +2612,9 @@ input.dcg-label-input.dcg-focus-visible {
 	outline: none;
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-saved-graphs-tile:has([aria-label='Graphing']) {
+	.dcg-saved-graphs-tile:has([aria-label='Graphing']),
+.dcg-calculator-api-container-v1_12
+	.dcg-graph-list__row:has([aria-label='Graphing']) {
 	--md-sys-color-primary: var(--md-sys-color-graphing-primary);
 	--md-sys-color-on-primary: var(--md-sys-color-graphing-on-primary);
 	--md-sys-color-primary-container: var(
@@ -2573,7 +2640,9 @@ input.dcg-label-input.dcg-focus-visible {
 	);
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-saved-graphs-tile:has([aria-label='Geometry']) {
+	.dcg-saved-graphs-tile:has([aria-label='Geometry']),
+.dcg-calculator-api-container-v1_12
+	.dcg-graph-list__row:has([aria-label='Geometry']) {
 	--md-sys-color-primary: var(--md-sys-color-geometry-primary);
 	--md-sys-color-on-primary: var(--md-sys-color-geometry-on-primary);
 	--md-sys-color-primary-container: var(
@@ -2599,7 +2668,9 @@ input.dcg-label-input.dcg-focus-visible {
 	);
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-saved-graphs-tile:has([aria-label='3D']) {
+	.dcg-saved-graphs-tile:has([aria-label='3D']),
+.dcg-calculator-api-container-v1_12
+	.dcg-graph-list__row:has([aria-label='3D']) {
 	--md-sys-color-primary: var(--md-sys-color-3d-primary);
 	--md-sys-color-on-primary: var(--md-sys-color-3d-on-primary);
 	--md-sys-color-primary-container: var(--md-sys-color-3d-primary-container);
@@ -2631,6 +2702,7 @@ input.dcg-label-input.dcg-focus-visible {
 .dcg-calculator-api-container-v1_12
 	.dcg-saved-graphs-tile
 	.dcg-dot-dot-dropdown {
+	overflow: visible;
 	color: rgb(var(--md-sys-color-on-primary-container));
 	transition: color 300ms cubic-bezier(0.34, 0.88, 0.34, 1);
 }
@@ -2689,9 +2761,29 @@ input.dcg-label-input.dcg-focus-visible {
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-shared-product-icon.dcg-icon-assessment-graphing,
-.dcg-calculator-api-container-v1_12 .dcg-shared-product-icon {
-	color: rgb(var(--md-sys-color-on-primary-container));
-	background: rgb(var(--md-sys-color-primary-container)) !important;
+.dcg-calculator-api-container-v1_12
+	.dcg-shared-product-icon[aria-label='Graphing'],
+.dcg-calculator-api-container-v1_12
+	.dcg-product-filter__product-icon.dcg-icon-graphing {
+	color: rgb(var(--md-sys-color-graphing-on-primary-container));
+	background: rgb(var(--md-sys-color-graphing-primary-container)) !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-shared-product-icon.dcg-icon-assessment-geometry,
+.dcg-calculator-api-container-v1_12
+	.dcg-shared-product-icon[aria-label='Geometry'],
+.dcg-calculator-api-container-v1_12
+	.dcg-product-filter__product-icon.dcg-icon-geometry {
+	color: rgb(var(--md-sys-color-geometry-on-primary-container));
+	background: rgb(var(--md-sys-color-geometry-primary-container)) !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-shared-product-icon.dcg-icon-assessment-3d,
+.dcg-calculator-api-container-v1_12 .dcg-shared-product-icon[aria-label='3D'],
+.dcg-calculator-api-container-v1_12
+	.dcg-product-filter__product-icon.dcg-icon-3d {
+	color: rgb(var(--md-sys-color-3d-on-primary-container));
+	background: rgb(var(--md-sys-color-3d-primary-container)) !important;
 }
 .dcg-calculator-api-container-v1_12 .dcg-my-graphs-modal__view-options {
 	gap: 12px;
