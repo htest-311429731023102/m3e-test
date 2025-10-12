@@ -1,4 +1,4 @@
-const darkMode = true;
+const darkMode = false;
 
 (async () => {
 	const {
@@ -132,7 +132,7 @@ const darkMode = true;
 			setTheme(color, darkMode);
 		}
 	}, 10);
-	setTheme('#048218', darkMode, '-graphing');
-	setTheme('#9b2cc2', darkMode, '-geometry');
-	setTheme('#ea4bd1', darkMode, '-3d');
+	setTheme('#358f3c', darkMode, '-graphing');
+	setTheme('#530d82', darkMode, '-geometry');
+	setTheme('#bd469b', darkMode, '-3d');
 })();
