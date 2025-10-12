@@ -2953,7 +2953,6 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-calculator-api-container-v1_12 .dcg-saved-graphs-tile__image-footer > * {
 	border-radius: 14px;
-	box-shadow: var(--elevation-1);
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-saved-graphs-tile__image-footer
