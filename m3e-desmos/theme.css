@@ -830,13 +830,137 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 .dcg-calculator-api-container-v1_12
 	.dcg-expressionitem.dcg-expressionfolder
 	.dcg-action-toggle-in-front-of-everything,
-.dcg-calculator-api-container-v1_12 .dcg-mq-math-mode {
+.dcg-calculator-api-container-v1_12 :not(.dcg-keypad) .dcg-mq-math-mode {
 	color: rgb(var(--md-sys-color-on-surface));
 }
 .dcg-calculator-api-container-v1_12 .dcg-exppanel .dcg-expressionitem .dcg-tab {
 	padding: 8px 20px;
 }
 
+/*star*/
+.dcg-calculator-api-container-v1_12 .dcg-keypad .dcg-keys-background {
+	background: rgb(var(--md-sys-color-surface));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-row
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn {
+	top: 4px;
+	bottom: 4px;
+	left: 4px;
+	right: 4px;
+	border-radius: 6px;
+	box-shadow: none;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn-content
+	.dcg-mq-math-mode
+	.dcg-mq-root-block
+	.dcg-mq-digit,
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad:has(.dcg-keypad-btn[dcg-command='123'])
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn-content
+	.dcg-mq-math-mode
+	.dcg-mq-root-block
+	* {
+	font-family: roboto, Sans-Serif;
+	font-style: normal;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn.dcg-btn-light-on-gray,
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	:nth-last-child(1 of :not(.dcg-keypad-btn-container))
+	~ .dcg-keypad-btn-container
+	.dcg-keypad-btn.dcg-btn-dark-on-gray {
+	color: rgb(var(--md-sys-color-on-surface-variant));
+	background: rgb(var(--md-sys-color-surface-container-highest));
+	border: none;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad:has(.dcg-keypad-btn[dcg-command='123'])
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn.dcg-btn-light-on-gray {
+	color: rgb(var(--md-sys-color-on-surface));
+	background: rgb(var(--md-sys-color-surface-container-low));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn.dcg-btn-dark-on-gray {
+	color: rgb(var(--md-sys-color-on-surface));
+	background: rgb(var(--md-sys-color-surface-container-low));
+	border: none;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad:has(.dcg-keypad-btn[dcg-command='123'])
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn.dcg-btn-dark-on-gray {
+	color: rgb(var(--md-sys-color-on-surface-variant));
+	background: rgb(var(--md-sys-color-surface-container-highest));
+	border: none;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-row
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn[dcg-command='ABC'],
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-row
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn[dcg-command='123'] {
+	border-radius: 16px;
+	color: rgb(var(--md-sys-color-on-secondary-container)) !important;
+	background: rgb(var(--md-sys-color-secondary-container)) !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-row
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn.dcg-btn-blue {
+	border-radius: 16px;
+	color: rgb(var(--md-sys-color-on-primary-container));
+	background: rgb(var(--md-sys-color-inverse-primary));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-row
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn[dcg-command='Audio'] {
+	color: rgb(var(--md-sys-color-on-tertiary-container));
+	background: rgb(var(--md-sys-color-tertiary-container));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-row
+	> :not(.dcg-keypad-btn-container) {
+	display: none;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container:has(+ :not(.dcg-keypad-btn-container)) {
+	margin-right: 8px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container:has([dcg-command='left']),
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container:has([dcg-command='right']) {
+	flex-grow: 0.75 !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container[style='flex-grow:2'] {
+	flex-grow: 1.5 !important;
+}
 .dcg-calculator-api-container-v1_12 .dcg-keypad .dcg-show-keypad-container,
 .dcg-calculator-api-container-v1_12 .dcg-keypad .dcg-minimize-keypad-container {
 	bottom: 72px;
@@ -857,7 +981,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	border-radius: 28px;
 	color: rgb(var(--md-sys-color-primary));
 	background: rgb(var(--md-sys-color-surface-container-high)) !important;
-	box-shadow: var(--elevation-2);
+	box-shadow: var(--elevation-1);
 	transition: border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9);
 }
 .dcg-calculator-api-container-v1_12
@@ -921,6 +1045,8 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	align-self: center;
+	width: -webkit-fill-available;
 	height: 56px !important;
 	min-height: unset;
 	top: 12px;
@@ -1540,7 +1666,7 @@ body.dsm-better-nav-scrollable-expressions
 }
 .btns > .dcg-slider-btn-container {
 	grid-row: 2;
-	width: 100%;
+	width: -webkit-fill-available;
 }
 .btns > .dcg-slider-btn-container .dcg-btn-slider {
 	width: 100%;
@@ -1783,7 +1909,7 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-segmented-control-btn {
 	height: 40px;
-	width: 100%;
+	width: -webkit-fill-available;
 	margin: 0 !important;
 	font-family: Roboto, Sans-Serif;
 	font-size: 14px;
@@ -1860,7 +1986,7 @@ body.dsm-better-nav-scrollable-expressions
 	font-size: 32px;
 }
 .dcg-toggle-container {
-	width: 100%;
+	width: -webkit-fill-available;
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-author-mode-section
@@ -2501,7 +2627,7 @@ body.dsm-better-nav-scrollable-expressions
 	flex-direction: column-reverse;
 }
 .dcg-options-right-side .dcg-segmented-control-container {
-	width: 100%;
+	width: -webkit-fill-available;
 }
 .dcg-options-right-side
 	.dcg-segmented-control-container:has(.dcg-point-segmented-option) {
@@ -2737,7 +2863,7 @@ body.dsm-better-nav-scrollable-expressions
 	border: none !important;
 }
 .dcg-poi-label .dcg-label > * {
-	color: rgb(var(--md-sys-color-inverse-on-surface));
+	color: rgb(var(--md-sys-color-inverse-on-surface)) !important;
 }
 
 .dcg-calculator-api-container-v1_12
@@ -2778,7 +2904,7 @@ body.dsm-better-nav-scrollable-expressions
 	background: rgb(var(--md-sys-color-surface-container-low));
 }
 .dcg-calculator-api-container-v1_12 .dcg-my-graphs-modal__tab {
-	width: 100%;
+	width: -webkit-fill-available;
 	justify-content: center;
 }
 .dcg-calculator-api-container-v1_12 .dcg-my-graphs-modal__heading {
@@ -2797,7 +2923,7 @@ body.dsm-better-nav-scrollable-expressions
 	display: block;
 	position: relative;
 	bottom: -14px;
-	width: 100%;
+	width: -webkit-fill-available;
 	height: 0;
 	margin: 0 2px;
 	border-radius: 3px 3px 0 0;
