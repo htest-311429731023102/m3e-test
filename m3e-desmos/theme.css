@@ -843,6 +843,11 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-basic-keypad
+	.dcg-keypad-btn-container {
+	height: 48px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
 	.dcg-keypad-row
 	.dcg-keypad-btn-container
 	.dcg-keypad-btn {
@@ -854,20 +859,23 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	box-shadow: none;
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-basic-keypad
-	.dcg-keypad-btn-container
+	.dcg-basic-keypad:has(.dcg-keypad-btn[dcg-command='ABC'])
+	:nth-child(1 of :not(.dcg-keypad-btn-container))
+	~ .dcg-keypad-btn-container
 	.dcg-keypad-btn-content
 	.dcg-mq-math-mode
 	.dcg-mq-root-block
-	.dcg-mq-digit,
+	*,
 .dcg-calculator-api-container-v1_12
 	.dcg-basic-keypad:has(.dcg-keypad-btn[dcg-command='123'])
 	.dcg-keypad-btn-container
+	.dcg-keypad-btn:not([dcg-command='a_b']):not([dcg-command='a^b'])
 	.dcg-keypad-btn-content
 	.dcg-mq-math-mode
 	.dcg-mq-root-block
 	* {
 	font-family: roboto, Sans-Serif;
+	font-size: 20px;
 	font-style: normal;
 }
 .dcg-calculator-api-container-v1_12
@@ -878,7 +886,12 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	.dcg-basic-keypad
 	:nth-last-child(1 of :not(.dcg-keypad-btn-container))
 	~ .dcg-keypad-btn-container
-	.dcg-keypad-btn.dcg-btn-dark-on-gray {
+	.dcg-keypad-btn.dcg-btn-dark-on-gray,
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad:has(.dcg-keypad-btn[dcg-command='123'])
+	.dcg-keypad-row:last-child
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn.dcg-btn-light-on-gray {
 	color: rgb(var(--md-sys-color-on-surface-variant));
 	background: rgb(var(--md-sys-color-surface-container-highest));
 	border: none;
@@ -916,7 +929,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	.dcg-keypad-row
 	.dcg-keypad-btn-container
 	.dcg-keypad-btn[dcg-command='123'] {
-	border-radius: 16px;
+	border-radius: 20px;
 	color: rgb(var(--md-sys-color-on-secondary-container)) !important;
 	background: rgb(var(--md-sys-color-secondary-container)) !important;
 }
@@ -925,7 +938,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	.dcg-keypad-row
 	.dcg-keypad-btn-container
 	.dcg-keypad-btn.dcg-btn-blue {
-	border-radius: 16px;
+	border-radius: 20px;
 	color: rgb(var(--md-sys-color-on-primary-container));
 	background: rgb(var(--md-sys-color-inverse-primary));
 }
