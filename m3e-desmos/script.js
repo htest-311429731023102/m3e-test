@@ -1,4 +1,4 @@
-const darkMode = false;
+const darkMode = true;
 
 (async () => {
 	const {
@@ -19,50 +19,35 @@ const darkMode = false;
 			['--md-sys-color-primary-fixed', rgbFromArgb(primary.tone(90))],
 			['--md-sys-color-primary-fixed-dim', rgbFromArgb(neutral.tone(80))],
 			['--md-sys-color-on-primary-fixed', rgbFromArgb(primary.tone(10))],
-			[
-				'--md-sys-color-on-primary-fixed-variant',
-				rgbFromArgb(primary.tone(30)),
-			],
+			['--md-sys-color-on-primary-fixed-variant', rgbFromArgb(primary.tone(30))],
 			['--md-sys-color-secondary-fixed', rgbFromArgb(secondary.tone(90))],
 			['--md-sys-color-secondary-fixed-dim', rgbFromArgb(secondary.tone(80))],
 			['--md-sys-color-on-secondary-fixed', rgbFromArgb(secondary.tone(10))],
-			[
-				'--md-sys-color-on-secondary-fixed-variant',
-				rgbFromArgb(secondary.tone(30)),
-			],
+			['--md-sys-color-on-secondary-fixed-variant', rgbFromArgb(secondary.tone(30))],
 			['--md-sys-color-tertiary-fixed', rgbFromArgb(tertiary.tone(90))],
 			['--md-sys-color-tertiary-fixed-dim', rgbFromArgb(tertiary.tone(80))],
 			['--md-sys-color-on-tertiary-fixed', rgbFromArgb(tertiary.tone(10))],
-			[
-				'--md-sys-color-on-tertiary-fixed-variant',
-				rgbFromArgb(tertiary.tone(30)),
-			],
+			['--md-sys-color-on-tertiary-fixed-variant', rgbFromArgb(tertiary.tone(30))],
+			['--md-sys-color-surface', rgbFromArgb(neutral.tone(98))],
 			['--md-sys-color-surface-dim', rgbFromArgb(neutral.tone(87))],
 			['--md-sys-color-surface-bright', rgbFromArgb(neutral.tone(98))],
-			[
-				'--md-sys-color-surface-container-lowest',
-				rgbFromArgb(neutral.tone(100)),
-			],
+			['--md-sys-color-surface-container-lowest',
+				rgbFromArgb(neutral.tone(100))],
 			['--md-sys-color-surface-container-low', rgbFromArgb(neutral.tone(96))],
 			['--md-sys-color-surface-container', rgbFromArgb(neutral.tone(94))],
 			['--md-sys-color-surface-container-high', rgbFromArgb(neutral.tone(92))],
-			[
-				'--md-sys-color-surface-container-highest',
-				rgbFromArgb(neutral.tone(90)),
-			],
+			['--md-sys-color-surface-container-highest', rgbFromArgb(neutral.tone(90))],
 		]);
 
 		const darkColors = new Map([
+			['--md-sys-color-surface', rgbFromArgb(neutral.tone(6))],
 			['--md-sys-color-surface-dim', rgbFromArgb(neutral.tone(6))],
 			['--md-sys-color-surface-bright', rgbFromArgb(neutral.tone(24))],
 			['--md-sys-color-surface-container-lowest', rgbFromArgb(neutral.tone(4))],
 			['--md-sys-color-surface-container-low', rgbFromArgb(neutral.tone(10))],
 			['--md-sys-color-surface-container', rgbFromArgb(neutral.tone(12))],
 			['--md-sys-color-surface-container-high', rgbFromArgb(neutral.tone(17))],
-			[
-				'--md-sys-color-surface-container-highest',
-				rgbFromArgb(neutral.tone(22)),
-			],
+			['--md-sys-color-surface-container-highest', rgbFromArgb(neutral.tone(22))],
 		]);
 
 		if (mode === 'light') {
