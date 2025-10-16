@@ -871,7 +871,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	.dcg-basic-keypad
 	.dcg-keypad-row
 	.dcg-keypad-btn-container:has(
-		+ .dcg-keypad-btn-container:not(.dcg-disabled):has(.dcg-keypad-btn:active)
+		+ .dcg-keypad-btn-container:not(.dcg-disabled) .dcg-keypad-btn:active
 	) {
 	flex-grow: 0.85 !important;
 }
