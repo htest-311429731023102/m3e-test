@@ -841,11 +841,27 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 .dcg-calculator-api-container-v1_12 .dcg-keypad .dcg-keys-background {
 	background: rgb(var(--md-sys-color-surface));
 }
+.dcg-calculator-api-container-v1_12 .dcg-keypad .dcg-keys {
+	max-width: 868px;
+}
 .dcg-calculator-api-container-v1_12
 	.dcg-basic-keypad
 	.dcg-keypad-btn-container {
 	height: 48px;
 	transition: flex-grow 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9);
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container:has([dcg-command='left']),
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container:has([dcg-command='right']) {
+	flex-grow: 0.75 !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container[style='flex-grow:2'] {
+	flex-grow: 1.5 !important;
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-basic-keypad
@@ -874,6 +890,24 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 		+ .dcg-keypad-btn-container:not(.dcg-disabled) .dcg-keypad-btn:active
 	) {
 	flex-grow: 0.85 !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	:nth-last-child(1 of :not(.dcg-keypad-btn-container))
+	~ .dcg-keypad-btn-container:not(.dcg-disabled):has(.dcg-keypad-btn:active) {
+	flex-grow: 1.5 !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container:has([dcg-command='left']):has(
+		.dcg-keypad-btn:active
+	),
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container:has([dcg-command='right']):has(
+		.dcg-keypad-btn:active
+	) {
+	flex-grow: 0.9 !important;
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-basic-keypad
@@ -997,19 +1031,6 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	.dcg-basic-keypad
 	.dcg-keypad-btn-container:has(+ :not(.dcg-keypad-btn-container)) {
 	margin-right: 8px;
-}
-.dcg-calculator-api-container-v1_12
-	.dcg-basic-keypad
-	.dcg-keypad-btn-container:has([dcg-command='left']),
-.dcg-calculator-api-container-v1_12
-	.dcg-basic-keypad
-	.dcg-keypad-btn-container:has([dcg-command='right']) {
-	flex-grow: 0.75 !important;
-}
-.dcg-calculator-api-container-v1_12
-	.dcg-basic-keypad
-	.dcg-keypad-btn-container[style='flex-grow:2'] {
-	flex-grow: 1.5 !important;
 }
 .dcg-calculator-api-container-v1_12 .dcg-keypad .dcg-show-keypad-container,
 .dcg-calculator-api-container-v1_12 .dcg-keypad .dcg-minimize-keypad-container {
@@ -2862,6 +2883,7 @@ body.dsm-better-nav-scrollable-expressions
 	justify-content: center;
 	width: 18px !important;
 	height: 18px !important;
+	margin: 11px !important;
 	border-radius: 2px !important;
 	box-shadow: inset 0 0 0 2px rgb(var(--md-sys-color-on-surface-variant)) !important;
 	border: none !important;
@@ -2901,6 +2923,11 @@ body.dsm-better-nav-scrollable-expressions
 	width: 40px;
 	height: 40px;
 	background: rgba(var(--md-sys-color-primary), 0.08);
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-settings-container
+	.dcg-braille-container {
+	margin-top: 0;
 }
 
 .dcg-calculator-api-container-v1_12 .dcg-poi-label .dcg-pt {
@@ -3122,7 +3149,12 @@ body.dsm-better-nav-scrollable-expressions
 	color: rgb(var(--md-sys-color-on-primary));
 }
 .dcg-calculator-api-container-v1_12 .dcg-saved-graphs-tile__header {
-	padding: 4px 12px;
+	padding-right: 8px;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-saved-graphs-tile__header
+	.dcg-checkbox {
+	padding: 2px 0;
 }
 .dcg-calculator-api-container-v1_12 .dcg-saved-graphs-tile__image-footer {
 	padding: 10px;
