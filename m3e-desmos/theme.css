@@ -856,10 +856,9 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-basic-keypad
-	.dcg-keypad-btn-container:has([dcg-command='left']),
-.dcg-calculator-api-container-v1_12
-	.dcg-basic-keypad
-	.dcg-keypad-btn-container:has([dcg-command='right']) {
+	.dcg-keypad-row:nth-child(2)
+	:nth-last-child(1 of :not(.dcg-keypad-btn-container))
+	~ .dcg-keypad-btn-container {
 	flex-grow: 0.75 !important;
 }
 .dcg-calculator-api-container-v1_12
@@ -903,15 +902,37 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-basic-keypad
-	.dcg-keypad-btn-container:has([dcg-command='left']):has(
-		.dcg-keypad-btn:active
-	),
+	.dcg-keypad-row:nth-child(2)
+	:nth-last-child(1 of :not(.dcg-keypad-btn-container))
+	~ .dcg-keypad-btn-container:not(.dcg-disabled):has(.dcg-keypad-btn:active) {
+	flex-grow: 0.9 !important;
+}
 .dcg-calculator-api-container-v1_12
 	.dcg-basic-keypad
-	.dcg-keypad-btn-container:has([dcg-command='right']):has(
-		.dcg-keypad-btn:active
+	.dcg-keypad-row:nth-child(2)
+	:nth-last-child(1 of :not(.dcg-keypad-btn-container))
+	~ .dcg-keypad-btn-container:not(.dcg-disabled):has(.dcg-keypad-btn:active)
+	+ .dcg-keypad-btn-container,
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad
+	.dcg-keypad-row:nth-child(2)
+	:nth-last-child(1 of :not(.dcg-keypad-btn-container))
+	~ .dcg-keypad-btn-container:has(
+		+ .dcg-keypad-btn-container:not(.dcg-disabled) .dcg-keypad-btn:active
 	) {
-	flex-grow: 0.9 !important;
+	flex-grow: 0.6 !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad:has(.dcg-keypad-btn[dcg-command='123'])
+	.dcg-keypad-row:nth-child(2)
+	~ .dcg-keypad-row
+	.dcg-keypad-btn-container:first-child,
+.dcg-calculator-api-container-v1_12
+	.dcg-basic-keypad:has(.dcg-keypad-btn[dcg-command='123'])
+	.dcg-keypad-row:nth-child(2)
+	~ .dcg-keypad-row
+	.dcg-keypad-btn-container:last-child {
+	flex-grow: 1 !important;
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-basic-keypad
