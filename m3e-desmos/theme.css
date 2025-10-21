@@ -89,7 +89,7 @@ html {
 	background: rgb(var(--md-sys-color-on-surface));
 }
 
-.dcg-graph-outer:has(.dcg-graph-inner) {
+.dcg-calculator-api-container-v1_12 .dcg-graph-outer:has(.dcg-graph-inner) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -99,12 +99,12 @@ html {
 	box-shadow: inset var(--elevation-2);
 	background: white;
 }
-.dcg-graph-outer,
-.dcg-graph-inner {
+.dcg-calculator-api-container-v1_12 .dcg-graph-outer,
+.dcg-calculator-api-container-v1_12 .dcg-graph-inner {
 	border-radius: 20px;
 	border-top-right-radius: 48px;
 }
-.dcg-grapher {
+.dcg-calculator-api-container-v1_12 .dcg-grapher {
 	background: rgb(var(--md-sys-color-surface-container-low)) !important;
 }
 
@@ -346,6 +346,11 @@ button.dcg-unstyled-button.dcg-action-save.dcg-save-button.tooltip-offset.dcg-di
 	.dcg-new-my-graphs-item__dropdown
 	.dcg-icon-caret-down {
 	rotate: 180deg;
+}
+.dcg-calculator-api-container-v1_12 .dcg-my-graphs-modal__workspace-header,
+.dcg-calculator-api-container-v1_12 .dcg-my-graphs-modal__footer {
+	padding: 16px;
+	background: rgb(var(--md-sys-color-surface-container));
 }
 
 .dcg-calculator-api-container-v1_12 .dcg-btn-blue {
