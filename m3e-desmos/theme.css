@@ -894,7 +894,8 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 .dcg-calculator-api-container-v1_12
 	.dcg-basic-keypad
 	.dcg-keypad-btn-container {
-	height: 48px;
+	height: 48px !important;
+	margin-bottom: 0 !important;
 	transition: flex-grow 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9);
 }
 .dcg-calculator-api-container-v1_12
@@ -989,6 +990,22 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	border-radius: 8px;
 	box-shadow: none;
 	border: none;
+	transition: border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9);
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-functions-popover
+	.dcg-basic-keypad
+	.dcg-keypad-btn-container
+	.dcg-keypad-btn {
+	top: 4px;
+	bottom: 4px;
+	left: 4px;
+	right: 4px;
+	border-radius: 20px;
+	box-shadow: none;
+	color: rgb(var(--md-sys-color-on-surface));
+	background: none;
+	border: 1px solid rgb(var(--md-sys-color-outline-variant));
 	transition: border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9);
 }
 .dcg-calculator-api-container-v1_12
@@ -1140,6 +1157,49 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	.dcg-minimize-keypad:active {
 	border-radius: 12px;
 }
+.dcg-calculator-api-container-v1_12
+	.dcg-keypad
+	.dcg-functions-popover
+	.dcg-popover-interior {
+	width: 350px;
+	padding-top: 0 !important;
+	border-top: 16px solid rgb(var(--md-sys-color-surface-container)) !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-keypad
+	.dcg-functions-popover
+	.dcg-section-heading {
+	padding: 4px;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	text-align: center;
+	border-radius: 16px;
+	color: rgb(var(--md-sys-color-on-surface-variant));
+	background: rgb(var(--md-sys-color-surface-container-highest));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-keypad
+	.dcg-functions-popover
+	.dcg-keypad-keys-section
+	+ .dcg-keypad-keys-section {
+	margin-top: 0;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-keypad
+	.dcg-functions-popover
+	.dcg-keypad-keys-section,
+.dcg-calculator-api-container-v1_12
+	.dcg-keypad
+	.dcg-functions-popover
+	.dcg-keypad-keys-buttons {
+	margin-bottom: 0;
+}
+.dcg-keypad-keys-buttons {
+	display: flex;
+	flex-wrap: wrap;
+}
+
 .dcg-calculator-api-container-v1_12 .dcg-btn-flat-gray {
 	display: flex;
 	align-items: center;
