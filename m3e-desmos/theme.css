@@ -846,7 +846,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	position: relative;
 	border: none;
 	opacity: 1 !important;
-	font-family: dcg-icons-11-10-2025;
+	font-family: dcg-icons-11-12-2025;
 	font-size: 110%;
 }
 .dcg-calculator-api-container-v1_12
@@ -1263,7 +1263,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	content: '\\e256';
 	speak: never;
 	color: rgb(var(--md-sys-color-on-primary));
-	font-family: dcg-icons-11-10-2025 !important;
+	font-family: dcg-icons-11-12-2025 !important;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
