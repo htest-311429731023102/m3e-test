@@ -3925,5 +3925,77 @@ body.dsm-better-nav-scrollable-expressions
 	.dcg-geo-token-view
 	.dcg-token-icon
 	svg {
-	stroke-width: 4px;
+	scale: 1.5;
+	stroke-width: 2px;
+	stroke-linejoin: round;
+	overflow: visible;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-mq-container
+	.dcg-geo-token-view
+	.dcg-token-icon
+	svg
+	> * {
+	stroke: inherit;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-geo-token-view
+	.dcg-token-glider:before,
+.dcg-calculator-api-container-v1_12
+	.dcg-geo-token-view
+	.dcg-token-intersection:before,
+.dcg-calculator-api-container-v1_12
+	.dcg-geo-token-view
+	.dcg-token-intersection:after,
+.dcg-calculator-api-container-v1_12
+	.dcg-geo-token-view
+	.dcg-token-midpoint:before,
+.dcg-calculator-api-container-v1_12
+	.dcg-literal-token-error
+	.dcg-token-glider:before,
+.dcg-calculator-api-container-v1_12
+	.dcg-literal-token-error
+	.dcg-token-intersection:before,
+.dcg-calculator-api-container-v1_12
+	.dcg-literal-token-error
+	.dcg-token-intersection:after,
+.dcg-calculator-api-container-v1_12
+	.dcg-literal-token-error
+	.dcg-token-midpoint:before {
+	border-radius: 1px;
+	opacity: 0.4;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-mq-container
+	.dcg-geo-token-view
+	.dcg-token-glider:before,
+.dcg-calculator-api-container-v1_12
+	.dcg-mq-container
+	.dcg-geo-token-view
+	.dcg-token-intersection:before,
+.dcg-calculator-api-container-v1_12
+	.dcg-mq-container
+	.dcg-geo-token-view
+	.dcg-token-intersection:after,
+.dcg-calculator-api-container-v1_12
+	.dcg-mq-container
+	.dcg-geo-token-view
+	.dcg-token-midpoint:before,
+.dcg-calculator-api-container-v1_12
+	.dcg-mq-container
+	.dcg-literal-token-error
+	.dcg-token-glider:before,
+.dcg-calculator-api-container-v1_12
+	.dcg-mq-container
+	.dcg-literal-token-error
+	.dcg-token-intersection:before,
+.dcg-calculator-api-container-v1_12
+	.dcg-mq-container
+	.dcg-literal-token-error
+	.dcg-token-intersection:after,
+.dcg-calculator-api-container-v1_12
+	.dcg-mq-container
+	.dcg-literal-token-error
+	.dcg-token-midpoint:before {
+	scale: 1.4;
 }
