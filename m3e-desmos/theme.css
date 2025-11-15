@@ -775,11 +775,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 
 .dcg-calculator-api-container-v1_12
 	.dcg-exppanel
-	.dcg-expressionitem.dcg-selected/*,
-.dcg-calculator-api-container-v1_12
-	.dcg-exppanel
-	.dcg-expressionitem.dcg-selected
-	.dcg-mq-root-block*/,
+	.dcg-expressionitem.dcg-selected,
 .dcg-calculator-api-container-v1_12
 	.dcg-exppanel
 	.dcg-expressionitem.dcg-dragging,
@@ -885,7 +881,12 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 .dcg-calculator-api-container-v1_12
 	.dcg-expressionitem.dcg-expressionfolder
 	.dcg-action-toggle-in-front-of-everything,
-.dcg-calculator-api-container-v1_12 :not(.dcg-keypad) .dcg-mq-math-mode {
+.dcg-calculator-api-container-v1_12
+	:not(.dcg-keypad):not(
+		.dcg-poi-label > .dcg-label > .dcg-mixed-text-math
+	)
+	> .dcg-mathquill-wrapper
+	.dcg-mq-math-mode {
 	color: rgb(var(--md-sys-color-on-surface));
 }
 .dcg-calculator-api-container-v1_12 .dcg-exppanel .dcg-expressionitem .dcg-tab {
@@ -2614,9 +2615,16 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-evaluation-container
+	.dcg-show-more-link:after {
+	content: none;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-evaluation-container
 	.dcg-evaluation-view__list-values {
 	overflow-x: auto;
 	width: -webkit-fill-available;
+	border-radius: 4px;
+	background: rgb(var(--md-sys-color-surface-container));
 }
 .dsm-color-container {
 	width: -webkit-fill-available;
@@ -3083,7 +3091,7 @@ body.dsm-better-nav-scrollable-expressions
 	background: rgb(var(--md-sys-color-inverse-surface)) !important;
 	border: none !important;
 }
-.dcg-poi-label .dcg-label > * {
+.dcg-poi-label.dcg-show-border .dcg-label > * {
 	color: rgb(var(--md-sys-color-inverse-on-surface)) !important;
 }
 
@@ -3929,6 +3937,10 @@ body.dsm-better-nav-scrollable-expressions
 	stroke-width: 2px;
 	stroke-linejoin: round;
 	overflow: visible;
+}
+.dcg-calculator-api-container-v1_12 .dcg-geo-token-view .dcg-token-circle,
+.dcg-calculator-api-container-v1_12 .dcg-literal-token-error .dcg-token-circle {
+	scale: 1.5;
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-mq-container
