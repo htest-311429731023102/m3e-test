@@ -957,7 +957,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-play-pause-icon-view
-	.dcg-slider-menu-opener:before {
+	.dcg-slider-menu-opener::before {
 	width: 32px;
 	height: 32px;
 	margin: -16px;
@@ -2795,7 +2795,15 @@ body.dsm-better-nav-scrollable-expressions
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	font-size: 24px;
 	z-index: 1;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-color-picker-container
+	.dcg-color-picker-menu
+	.dcg-color-tile
+	i.dcg-icon-check::before {
+	content: '\\e974';
 }
 .dcg-calculator-api-container-v1_12 .dcg-color-picker-container {
 	max-height: unset;
@@ -2803,7 +2811,7 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-evaluation-container
-	.dcg-show-more-link:after {
+	.dcg-show-more-link::after {
 	content: none;
 }
 .dcg-calculator-api-container-v1_12
@@ -3661,7 +3669,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12 .dcg-folder-item-count {
 	display: none;
 }
-.dcg-calculator-api-container-v1_12 .dcg-folder__thumbnails:after {
+.dcg-calculator-api-container-v1_12 .dcg-folder__thumbnails::after {
 	content: none;
 }
 .dcg-calculator-api-container-v1_12
@@ -4031,21 +4039,21 @@ body.dsm-better-nav-scrollable-expressions
 		);
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-geo-token-view.dcg-parent-of-hovered-token:not(.dcg-static-token):after,
+	.dcg-geo-token-view.dcg-parent-of-hovered-token:not(.dcg-static-token)::after,
 .dcg-calculator-api-container-v1_12
 	.dcg-literal-token-error.dcg-parent-of-hovered-token:not(
 		.dcg-static-token
-	):after {
+	)::after {
 	margin-left: -6px;
 	border-width: 6px;
 	border-top-color: color-mix(in srgb, currentColor 32%, transparent);
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-geo-token-view.dcg-child-of-hovered-token:not(.dcg-static-token):after,
+	.dcg-geo-token-view.dcg-child-of-hovered-token:not(.dcg-static-token)::after,
 .dcg-calculator-api-container-v1_12
 	.dcg-literal-token-error.dcg-child-of-hovered-token:not(
 		.dcg-static-token
-	):after {
+	)::after {
 	margin-left: -6px;
 	border-width: 6px;
 	border-bottom-color: color-mix(in srgb, currentColor 32%, transparent);
@@ -4140,10 +4148,6 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12 .dcg-literal-token-error .dcg-token-icon {
 	overflow: visible;
 }
-.dcg-calculator-api-container-v1_12 .dcg-geo-token-view i,
-.dcg-calculator-api-container-v1_12 .dcg-literal-token-error i {
-	-webkit-text-stroke: 1px;
-}
 .dcg-calculator-api-container-v1_12 .dcg-mq-container .dcg-geo-token-view,
 .dcg-calculator-api-container-v1_12 .dcg-mq-container .dcg-literal-token-error {
 	width: 28px;
@@ -4234,63 +4238,63 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-geo-token-view
-	.dcg-token-glider:before,
+	.dcg-token-glider::before,
 .dcg-calculator-api-container-v1_12
 	.dcg-geo-token-view
-	.dcg-token-intersection:before,
+	.dcg-token-intersection::before,
 .dcg-calculator-api-container-v1_12
 	.dcg-geo-token-view
-	.dcg-token-intersection:after,
+	.dcg-token-intersection::after,
 .dcg-calculator-api-container-v1_12
 	.dcg-geo-token-view
-	.dcg-token-midpoint:before,
+	.dcg-token-midpoint::before,
 .dcg-calculator-api-container-v1_12
 	.dcg-literal-token-error
-	.dcg-token-glider:before,
+	.dcg-token-glider::before,
 .dcg-calculator-api-container-v1_12
 	.dcg-literal-token-error
-	.dcg-token-intersection:before,
+	.dcg-token-intersection::before,
 .dcg-calculator-api-container-v1_12
 	.dcg-literal-token-error
-	.dcg-token-intersection:after,
+	.dcg-token-intersection::after,
 .dcg-calculator-api-container-v1_12
 	.dcg-literal-token-error
-	.dcg-token-midpoint:before {
+	.dcg-token-midpoint::before {
 	border-radius: 1px;
 	opacity: 0.4;
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-mq-container
 	.dcg-geo-token-view
-	.dcg-token-glider:before,
+	.dcg-token-glider::before,
 .dcg-calculator-api-container-v1_12
 	.dcg-mq-container
 	.dcg-geo-token-view
-	.dcg-token-intersection:before,
+	.dcg-token-intersection::before,
 .dcg-calculator-api-container-v1_12
 	.dcg-mq-container
 	.dcg-geo-token-view
-	.dcg-token-intersection:after,
+	.dcg-token-intersection::after,
 .dcg-calculator-api-container-v1_12
 	.dcg-mq-container
 	.dcg-geo-token-view
-	.dcg-token-midpoint:before,
+	.dcg-token-midpoint::before,
 .dcg-calculator-api-container-v1_12
 	.dcg-mq-container
 	.dcg-literal-token-error
-	.dcg-token-glider:before,
+	.dcg-token-glider::before,
 .dcg-calculator-api-container-v1_12
 	.dcg-mq-container
 	.dcg-literal-token-error
-	.dcg-token-intersection:before,
+	.dcg-token-intersection::before,
 .dcg-calculator-api-container-v1_12
 	.dcg-mq-container
 	.dcg-literal-token-error
-	.dcg-token-intersection:after,
+	.dcg-token-intersection::after,
 .dcg-calculator-api-container-v1_12
 	.dcg-mq-container
 	.dcg-literal-token-error
-	.dcg-token-midpoint:before {
+	.dcg-token-midpoint::before {
 	scale: 1.4;
 }
 
@@ -4382,10 +4386,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-geo-basic-tools
 	.dcg-split-btn.dcg-selected.dcg-hovered
-	.dcg-tool-dropdown {
-	top: 100%;
-	color: rgb(var(--md-sys-color-secondary));
-}
+	.dcg-tool-dropdown,
 .dcg-calculator-api-container-v1_12
 	.dcg-multi-select-header
 	.dcg-toolbar-dropdown-button
@@ -4395,8 +4396,22 @@ body.dsm-better-nav-scrollable-expressions
 	.dcg-toolbar-dropdown-button
 	.dcg-tool-dropdown
 	i.dcg-hovered {
-	top: 36px;
-	color: rgb(var(--md-sys-color-secondary)) !important;
+	top: 100%;
+	color: rgb(var(--md-sys-color-secondary));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-geo-basic-tools
+	.dcg-split-btn
+	.dcg-tool-dropdown
+	.dcg-icon-caret-down::before,
+.dcg-calculator-api-container-v1_12
+	.dcg-multi-select-header
+	.dcg-toolbar-dropdown-button
+	.dcg-tool-dropdown
+	i::before {
+	content: '\\e975';
+	font-size: 24px;
+	line-height: 12px;
 }
 .dcg-calculator-api-container-v1_12 .dcg-select-tools-dropdown {
 	top: 56px;
@@ -4420,7 +4435,7 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-options-menu-section-container
 	.dcg-options-menu-section
-	+ .dcg-options-menu-section:after {
+	+ .dcg-options-menu-section::after {
 	content: '';
 	display: block;
 	position: absolute;
@@ -4469,6 +4484,7 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-calculator-api-container-v1_12 .dcg-navigate-back i,
 .dcg-calculator-api-container-v1_12 .dcg-navigate-back.dcg-hovered i {
+	font-size: 24px;
 	color: rgb(var(--md-sys-color-on-surface-variant));
 }
 .dcg-calculator-api-container-v1_12 .dcg-navigate-back.dcg-hovered {
@@ -4584,17 +4600,17 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12
 	.dcg-select-tools-dropdown
 	button.dcg-dropdown-tool.dcg-transformation-tool
-	i.dcg-icon-rotation:after,
+	i.dcg-icon-rotation::after,
 .dcg-calculator-api-container-v1_12
 	.dcg-select-tools-dropdown
 	button.dcg-dropdown-tool.dcg-transformation-tool
-	i.dcg-icon-dilation:after {
+	i.dcg-icon-dilation::after {
 	background: rgb(var(--md-sys-color-primary));
 }
 .dsm-set-primary-color.dcg-sliding-interior
 	.dcg-select-tools-dropdown
 	button.dcg-dropdown-tool.dcg-transformation-tool
-	i.dcg-icon-reflection:after {
+	i.dcg-icon-reflection::after {
 	margin-right: 0;
 	border-right: 2px dashed rgb(var(--md-sys-color-primary));
 }
@@ -4620,7 +4636,24 @@ body.dsm-better-nav-scrollable-expressions
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-geometry-toolbar-view
-	.dcg-color-picker-container {
-	border-radius: 20px;
-	overflow: hidden;
+	.dcg-color-picker-container
+	.dcg-color-tile:first-child
+	.dcg-color-swatch:first-child {
+	border-top-left-radius: 20px !important;
+	border-bottom-left-radius: 20px !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-geometry-toolbar-view
+	.dcg-color-picker-container
+	.dcg-color-tile:last-child
+	.dcg-color-swatch {
+	border-top-right-radius: 20px !important;
+	border-bottom-right-radius: 20px !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-multi-select-header
+	.dcg-label-button
+	.dcg-label-button-icon {
+	color: rgb(var(--md-sys-color-on-tertiary));
+	background: rgb(var(--md-sys-color-tertiary));
 }
