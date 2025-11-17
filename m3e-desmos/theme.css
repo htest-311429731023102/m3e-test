@@ -172,7 +172,7 @@ button.dcg-unstyled-button.dcg-action-opendrawer.dcg-header-btn {
 .dcg-calculator-api-container-v1_12
 	.dcg-open-my-graphs-button
 	.dcg-icon-folder-open::before {
-	content: '\\e246';
+	content: '\e246';
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-open-my-graphs-button
@@ -935,7 +935,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	box-shadow: none;
 }
 .dcg-calculator-api-container-v1_12 .dcg-circular-icon.dcg-hidden::before {
-	content: '\\e26d';
+	content: '\e26d';
 	color: rgb(var(--md-sys-color-on-surface));
 	position: relative;
 	border: none;
@@ -1424,7 +1424,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-expressionitem.dcg-new-expression::after {
-	content: '\\e256';
+	content: '\e256';
 	speak: never;
 	color: rgb(var(--md-sys-color-on-primary));
 	font-family: mdcg-icons, dcg-icons-11-14-2025-2 !important;
@@ -2803,7 +2803,7 @@ body.dsm-better-nav-scrollable-expressions
 	.dcg-color-picker-menu
 	.dcg-color-tile
 	i.dcg-icon-check::before {
-	content: '\\e974';
+	content: '\e974';
 }
 .dcg-calculator-api-container-v1_12 .dcg-color-picker-container {
 	max-height: unset;
@@ -4409,7 +4409,7 @@ body.dsm-better-nav-scrollable-expressions
 	.dcg-toolbar-dropdown-button
 	.dcg-tool-dropdown
 	i::before {
-	content: '\\e975';
+	content: '\e975';
 	font-size: 24px;
 	line-height: 12px;
 }
