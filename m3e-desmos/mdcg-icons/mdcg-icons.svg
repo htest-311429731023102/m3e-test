@@ -104,6 +104,8 @@
 
 <glyph glyph-name="check-box" unicode="&#xe26a;" d="M417 142l-209 208 59 59 150-149 316 316 59-59-375-375z" horiz-adv-x="1000" />
 
+<glyph glyph-name="arrow-back" unicode="&#xe26c;" d="M833 392h-507l233 233-59 58-333-333 333-333 59 58-233 233h507v84z" horiz-adv-x="1000" />
+
 <glyph glyph-name="arrow-forward-ios" unicode="&#xe26d;" d="M260 7l73-74 417 417-417 417-73-74 343-343-343-343z" horiz-adv-x="1000" />
 
 <glyph glyph-name="backspace" unicode="&#xe26f;" d="M917 725h-625c-29 0-52-15-67-37l-225-338 225-338c15-22 38-37 67-37h625c46 0 83 38 83 83v584c0 46-37 83-83 83z m0-667h-622l-195 292 194 292h623v-584z m-483 84l149 149 150-149 59 58-150 150 150 150-59 58-150-149-149 149-59-58 150-150-150-150 59-58z" horiz-adv-x="1000" />
