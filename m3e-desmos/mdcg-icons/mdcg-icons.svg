@@ -203,6 +203,8 @@
 <glyph glyph-name="drag-handle" unicode="&#xe973;" d="M833 475h-666v-83h666v83z m-666-250h666v83h-666v-83z" horiz-adv-x="1000" />
 
 <glyph glyph-name="check" unicode="&#xe974;" d="M367 189l-174 173-59-58 233-233 500 500-59 58-441-440z" horiz-adv-x="1000" />
+
+<glyph glyph-name="arrow-drop-down" unicode="&#xe975;" d="M292 454l208-208 208 208h-416z" horiz-adv-x="1000" />
 </font>
 </defs>
 </svg>
