@@ -1,3 +1,5 @@
+# MDCG Project
+
 hai ! :3
 
 this is my little project thing that gives desmos a slightly more "material expressive 3" style similar to google's design that probably hasnt fully released yet idk man
