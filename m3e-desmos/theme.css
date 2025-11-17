@@ -4614,7 +4614,9 @@ body.dsm-better-nav-scrollable-expressions
 	margin-right: 0;
 	border-right: 2px dashed rgb(var(--md-sys-color-primary));
 }
-.dcg-calculator-api-container-v1_12 .dcg-options-menu-container {
+.dcg-calculator-api-container-v1_12
+	.dcg-geometry-toolbar-view
+	.dcg-options-menu-container {
 	top: 20px !important;
 }
 .dcg-calculator-api-container-v1_12 .dcg-multi-select-style-menu {
@@ -4623,6 +4625,12 @@ body.dsm-better-nav-scrollable-expressions
 	box-shadow: var(--elevation-2);
 	background: rgb(var(--md-sys-color-surface-container));
 	border: none;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-geometry-toolbar-view
+	.dcg-color-picker-container
+	.dcg-color-picker-menu {
+	gap: 0;
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-generic-options-menu
