@@ -508,7 +508,27 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 .dcg-calculator-api-container-v1_12
 	.dcg-container
 	.dcg-geometry-toolbar-view
-	.dcg-icon-btn {
+	.dcg-icon-btn,
+.dcg-calculator-api-container-v1_12
+	.dcg-container
+	.dcg-expression-top-bar
+	.dcg-icon-btn
+	i.dcg-icon-undo,
+.dcg-calculator-api-container-v1_12
+	.dcg-container
+	.dcg-expression-top-bar
+	.dcg-icon-btn
+	i.dcg-icon-redo,
+.dcg-calculator-api-container-v1_12
+	.dcg-container
+	.dcg-geometry-toolbar-view
+	.dcg-icon-btn
+	i.dcg-icon-undo,
+.dcg-calculator-api-container-v1_12
+	.dcg-container
+	.dcg-geometry-toolbar-view
+	.dcg-icon-btn
+	i.dcg-icon-redo {
 	font-size: 24px;
 }
 button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-expression.dcg-depressed {
