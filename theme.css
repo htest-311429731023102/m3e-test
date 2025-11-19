@@ -74,7 +74,7 @@ html {
 }
 .dcg-calculator-api-container-v1_12 [class^='dcg-icon-'],
 .dcg-calculator-api-container-v1_12 [class*=' dcg-icon-'] {
-	font-family: mdcg-icons, dcg-icons-11-14-2025-2 !important;
+	font-family: mdcg-icons, dcg-icons-11-17-2025 !important;
 }
 ::-webkit-scrollbar {
 	width: 8px;
@@ -948,7 +948,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	position: relative;
 	border: none;
 	opacity: 1 !important;
-	font-family: mdcg-icons, dcg-icons-11-14-2025-2;
+	font-family: mdcg-icons, dcg-icons-11-17-2025;
 	font-size: 110%;
 }
 .dcg-calculator-api-container-v1_12 .dcg-exppanel .dcg-expressionitem .dcg-tab,
@@ -1451,7 +1451,7 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	content: '\e256';
 	speak: never;
 	color: rgb(var(--md-sys-color-on-primary));
-	font-family: mdcg-icons, dcg-icons-11-14-2025-2 !important;
+	font-family: mdcg-icons, dcg-icons-11-17-2025 !important;
 	font-size: 24px;
 	font-style: normal;
 	font-weight: 400;
