@@ -597,8 +597,18 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 	.dcg-new-item
 	.dcg-expression-icon__container {
 	margin-right: unset;
-	width: 20px;
+	width: 24px;
 	text-align: center;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-add-expression-container
+	.dcg-popover
+	.dcg-popover-interior.dcg-add-expression-dropdown
+	.dcg-new-item
+	.dcg-expression-icon__container
+	i {
+	font-size: 24px;
+	color: rgb(var(--md-sys-color-on-surface-variant));
 }
 .dcg-calculator-api-container-v1_12
 	.dcg-container
@@ -2294,8 +2304,10 @@ body.dsm-better-nav-scrollable-expressions
 	background: rgba(var(--md-sys-color-on-surface), 0.08);
 }
 .dcg-calculator-api-container-v1_12
-	.dcg-my-graphs-modal
-	.dcg-dropdown-choice.dcg-standard-link-styling {
+	.dcg-shared-options-dropdown
+	.dcg-dropdown-choice {
+	gap: 12px;
+	padding: 8px 12px;
 	color: rgb(var(--md-sys-color-on-surface)) !important;
 }
 .dcg-calculator-api-container-v1_12
@@ -2310,10 +2322,40 @@ body.dsm-better-nav-scrollable-expressions
 	.dcg-dropdown-choice
 	.dcg-option-icon-container
 	.dcg-my-graphs-modal__product-icon {
-	font-size: 20px;
-	line-height: 20px;
-	padding: 2px;
+	font-size: 24px;
+	line-height: 24px;
 	color: rgb(var(--md-sys-color-on-surface-variant)) !important;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-shared-options-dropdown
+	.dcg-dropdown-choice
+	.dcg-option-icon-container {
+	width: fit-content;
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-my-graphs-modal
+	.dcg-dropdown-popover__interior {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: rgb(var(--md-sys-color-on-surface));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-shared-options-dropdown
+	.dcg-dropdown-choice
+	.dcg-option-icon-container
+	.dcg-option-icon {
+	font-size: 24px;
+	color: rgb(var(--md-sys-color-on-surface-variant));
+}
+.dcg-calculator-api-container-v1_12 .dcg-red-dropdown-option,
+.dcg-calculator-api-container-v1_12
+	.dcg-shared-options-dropdown
+	.dcg-dropdown-choice.dcg-red-dropdown-option
+	.dcg-option-icon-container
+	.dcg-option-icon {
+	color: rgb(var(--md-sys-color-error)) !important;
 }
 .account-name {
 	padding: 4px 12px 0 12px !important;
@@ -3928,6 +3970,40 @@ body.dsm-better-nav-scrollable-expressions
 .dcg-calculator-api-container-v1_12 .dcg-blue-link.dcg-hovered,
 .dcg-calculator-api-container-v1_12 .dcg-blue-link.dcg-depressed {
 	color: rgb(var(--md-sys-color-primary));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-btn-gray-outline.dcg-selected-graphs-actions__clear-selection {
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 24px;
+	padding: 16px 24px;
+	border-radius: 28px;
+	box-shadow: none;
+	color: rgb(var(--md-sys-color-on-primary)) !important;
+	background: rgb(var(--md-sys-color-primary)) !important;
+	border: none;
+	transition: border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9);
+}
+.dcg-calculator-api-container-v1_12 .dcg-selected-graphs-actions__icon-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 56px;
+	height: 56px;
+	font-size: 24px;
+	padding: 0;
+	border-radius: 28px;
+	box-shadow: none;
+	color: rgb(var(--md-sys-color-on-secondary-container)) !important;
+	background: rgb(var(--md-sys-color-secondary-container)) !important;
+	transition: border-radius 350ms cubic-bezier(0.42, 1.67, 0.21, 0.9);
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-btn-gray-outline.dcg-selected-graphs-actions__clear-selection.dcg-depressed,
+.dcg-calculator-api-container-v1_12
+	.dcg-selected-graphs-actions__icon-btn.dcg-depressed {
+	border-radius: 12px;
 }
 
 @keyframes mdcg-loading-spin-container {
