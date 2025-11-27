@@ -1017,6 +1017,11 @@ button.dcg-unstyled-button.dcg-icon-btn.dcg-add-expression-btn.dcg-action-add-ex
 .dcg-calculator-api-container-v1_12 .dcg-slider-container .dcg-maxLabel {
 	color: rgb(var(--md-sys-color-on-surface));
 }
+.dcg-calculator-api-container-v1_12
+	.dcg-smart-textarea-container
+	textarea.dcg-smart-textarea::placeholder {
+	color: rgb(var(--md-sys-color-on-surface-variant));
+}
 .dcg-calculator-api-container-v1_12 .dcg-exppanel .dcg-expressionitem .dcg-tab {
 	padding: 4px 16px;
 }
