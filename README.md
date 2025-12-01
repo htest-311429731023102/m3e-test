@@ -12,6 +12,8 @@ especially silostunt who helped make the script.js so that the colors could upda
 
 ## Instructions
 
+### apply thing
+
 hi this is how to apply the thing
 
 im using the [User JavaScript and CSS](https://chromewebstore.google.com/detail/user-javascript-and-css/nbhcbdghjpllgmfilhnhkllmkecfmpld) extension to inject css and js
@@ -39,6 +41,10 @@ or the minified version
 ```
 
 for the script, for now you can only copy the whole script from script.js and paste it into the javascript section
+
+### light/dark mode
+
+to switch between light and dark mode, make it so the first line of the javascript says `const darkMode = false;` for light mode, and `const darkMode = true;` for dark mode
 
 ---
 
