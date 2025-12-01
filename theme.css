@@ -4862,3 +4862,37 @@ body.dsm-better-nav-scrollable-expressions
 	.dsm-code-golf-char-count {
 	border-color: rgb(var(--md-sys-color-primary));
 }
+
+.dcg-calculator-api-container-v1_12
+	.dcg-expression-bottom
+	.dcg-expression-footer-title {
+	font-size: 14px;
+	line-height: 20px;
+	color: rgb(var(--md-sys-color-on-surface-variant));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-expression-bottom
+	.dcg-expression-footer-title-help,
+.dcg-calculator-api-container-v1_12
+	.dcg-expression-bottom
+	.dcg-expression-footer-title-help.dcg-hovered {
+	color: rgb(var(--md-sys-color-secondary));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-expressionitem.dcg-selected
+	.dcg-expression-bottom
+	.dcg-expression-footer-title {
+	font-size: 14px;
+	line-height: 20px;
+	color: rgb(var(--md-sys-color-on-primary-container));
+}
+.dcg-calculator-api-container-v1_12
+	.dcg-expressionitem.dcg-selected
+	.dcg-expression-bottom
+	.dcg-expression-footer-title-help,
+.dcg-calculator-api-container-v1_12
+	.dcg-expressionitem.dcg-selected
+	.dcg-expression-bottom
+	.dcg-expression-footer-title-help.dcg-hovered {
+	color: rgb(var(--md-sys-color-primary));
+}
